@@ -16,7 +16,7 @@ Gestion des commandes en arrière-plan et meurtres de processus en une vidéo :
 ## Tuer des processus
 
 - `kill -X Y` où Y est **l'identifiant** du processus
-- `pkill -X Z` ou `killall -X Z` où Z est **le nom du processus** du processus
+- `pkill -X Z` ou `killall -X Z` où Z est **le nom du processus**
 
 X peut être (entre 64 possibilités) :
 - `SIGTERM` (15) lui demande gentiment de se fermer (signal par défaut)
