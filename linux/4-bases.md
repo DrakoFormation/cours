@@ -46,8 +46,13 @@ La version en vidéo :
 ### Astuces
 
 - Voir les fichiers et dossiers cachés : `ls -a`
+- Voir les fichiers et dossiers cachés, mais pas le dossier courant et son parent (`.` et `..`) : `ls -A`
 - Avoir une liste contenant plus de détails (droits sur les dossiers, etc) : `ls -l`
-- Avoir une liste de différents fichiers et dossiers : `ls -l unFichier unAutreFichier unDossier` (vous affichera des informations sur les fichiers/dossiers demandés)
+- Avoir une liste de différents fichiers et dossiers : `ls -l unFichier unAutreFichier unDossier/` (vous affichera des informations sur les fichiers/dossiers demandés)
+- Ensemble d'option que j'utilise couramment : `ls -hal` pour afficher :
+  - `-l` les éléments sous forme de liste (et avoir un maximum d'informations)
+  - `-a` pour afficher tous les fichiers et dossiers (même ceux cachés et le dossier en cours et son parent)
+  - `-h` pour que les poids des fichiers soient affichés de manière humainement lisible (en Ko, Mo, Go, etc. plutôt qu'en octets uniquement)
 
 ## Créer un dossier
 
