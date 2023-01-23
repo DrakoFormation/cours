@@ -64,7 +64,8 @@ La version en vidéo :
 
 ### Astuces
 
-Pour créer un dossier et des sous-dossiers (dans notre exemple précédent, si `chemin` ou `chemin/du` n'existent pas), il faut ajouter l'option `p` comme ceci : `mkdir -p chemin/du/dossier` et la commande créera tous les dossiers nécessaires pour que votre dossier `dossier` existe.
+- Pour créer un dossier et des sous-dossiers (dans notre exemple précédent, si `chemin` ou `chemin/du` n'existent pas), il faut ajouter l'option `p` comme ceci : `mkdir -p chemin/du/dossier` et la commande créera tous les dossiers nécessaires pour que votre dossier `dossier` existe.
+- Par défaut, `mkdir` ne vous dit rien en cas de succès, vous pouvez ajouter l'option `v` pour avoir plus d'informations `mkdir -v chemin/du/dossier` par exemple
 
 ## Supprimer un fichier et/ou un dossier
 
@@ -79,6 +80,7 @@ La version en vidéo :
 - `rm -r` permet de supprimer récursivement un dossier et ce qu'il contient (sous-dossiers inclus)
 - `rm -f` permet de ne pas avoir à confirmer des suppressions
 - Utiliser une ou des étoiles dans le chemin du fichier peut permettre de supprimer des fichiers à plusieurs endroits à la fois (par exemple `rm -rf /var/log/**/*.gz` va supprimer tous les fichiers ayant l'extension `.gz` dans le dossier `/var/log/` ou n'importe lequel de ses sous-dossiers)
+- `rm -v` pour demander à `rm` de vous détailler ce qu'il supprime (très utile quand vous faites un `rm -rv unDossier`)
 
 ## Lecture de fichiers
 
@@ -135,6 +137,11 @@ Sous linux, renommer et déplacer sont une seule et même opération (dans les d
 
 Exemple : `mv test.txt /archives/tests/truc.txt` (test.txt n'existera plus)
 
+### Astuces
+
+- `mv -v fichier_source fichier_destination` permet de demander l'affichage des tâches effectuées
+
+
 ## Copier
 
 La version en vidéo :
@@ -148,3 +155,4 @@ Exemple : `cp test.txt /archives/tests/truc.txt` (test.txt existera toujours)
 ### Astuces 
 
 - `cp -r` permet de copier récursivement un dossier et tout ce qu'il contient (fichiers comme dossiers)
+- `cp -v` permet de demander l'affichage des tâches effectuées
