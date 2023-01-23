@@ -1,5 +1,15 @@
 # Commandes avancées
 
+## Lister les processus en cours
+
+La version en vidéo :
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/6fa2a3eb217c41c1b88a4a83d678b4dc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+- `ps` affiche les processus de l'utilisateur, `ps -e` tous les processus de la machine.
+- `top`, `htop` ou `glances` les affiche avec les consommations de mémoire, de processeur, etc.
+
+
 ## Lancer des commandes en arrière-plan
 
 Gestion des commandes en arrière-plan et meurtres de processus en une vidéo :
