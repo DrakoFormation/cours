@@ -20,6 +20,16 @@ Avant de commencer, ouvrir un terminal.
 - Créer un projet GitHub et inviter `Dreeckan` sur votre projet pour relecture
 - Pousser votre commit
 
+- Créer un dossier `2/suite` dans votre dossier d'exercices
+- Y créer un fichier vide `suite.md`
+- Afficher le contenu de `exercice1.txt` dans la sortie standard
+- Copier-coller la commande utilisée dans `suite.md`
+- Afficher la dernière ligne de `exercice1.txt`
+- Copier-coller la commande utilisée dans `suite.md`
+- Copier le fichier `exercice1.txt` dans le dossier `2/suite`
+- Faire de même pour le fichier `exercice2.txt`
+- Créer un commit et le pousser
+
 ## 2. Fonctionnement général
 
 Rester dans le dossier `Work/Linux/exercices`. Pour les questions ci-dessous, écrivez votre réponse dans le fichier `Work/Linux/exercices/2/exercice2.txt`.

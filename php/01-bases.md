@@ -137,7 +137,7 @@ $mesProduits = [
 
 ### Manipuler les tableaux
 
-- Accéder à une entrée
+#### Accéder à une entrée
 
 On utilise alors l'index correspondant à la ligne qu'on veut récupérer.
 
@@ -152,7 +152,7 @@ $unProduit = $mesProduits[0];
 $unAutreProduit = $mesProduits['uneEntrée'];
 ```
 
-- Ajouter une entrée
+#### Ajouter une entrée
 
 ```php
 $mesProduits = [
@@ -169,7 +169,7 @@ $mesProduits[] = 'un texte de test';
 
 Note : le dernier exemple ci-dessus (`$mesProduits[] = $value`) est équivalent à `.push(value)` de Javascript. Un index numérique est calculé (PHP récupère le dernier index numérique, et l'incrémente pour avoir le nouvel index) et `$value` est ajouté à cet index. 
 
-- Modifier une entrée
+#### Modifier une entrée
 
 ```php
 $mesProduits = [
@@ -182,7 +182,7 @@ $mesProduits = [
 $mesProduits[0] = 'no more foo';
 ```
 
-- Supprimer une entrée
+#### Supprimer une entrée
 
 ```php
 $mesProduits = [
@@ -194,7 +194,7 @@ $mesProduits = [
 unset($mesProduits[0]);
 ```
 
-- Fonctions utiles
+#### Fonctions utiles
 
 ```php
 $mesProduits = [

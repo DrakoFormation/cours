@@ -46,8 +46,13 @@ La version en vidéo :
 ### Astuces
 
 - Voir les fichiers et dossiers cachés : `ls -a`
+- Voir les fichiers et dossiers cachés, mais pas le dossier courant et son parent (`.` et `..`) : `ls -A`
 - Avoir une liste contenant plus de détails (droits sur les dossiers, etc) : `ls -l`
-- Avoir une liste de différents fichiers et dossiers : `ls -l unFichier unAutreFichier unDossier` (vous affichera des informations sur les fichiers/dossiers demandés)
+- Avoir une liste de différents fichiers et dossiers : `ls -l unFichier unAutreFichier unDossier/` (vous affichera des informations sur les fichiers/dossiers demandés)
+- Ensemble d'option que j'utilise couramment : `ls -hal` pour afficher :
+  - `-l` les éléments sous forme de liste (et avoir un maximum d'informations)
+  - `-a` pour afficher tous les fichiers et dossiers (même ceux cachés et le dossier en cours et son parent)
+  - `-h` pour que les poids des fichiers soient affichés de manière humainement lisible (en Ko, Mo, Go, etc. plutôt qu'en octets uniquement)
 
 ## Créer un dossier
 
@@ -143,12 +148,3 @@ Exemple : `cp test.txt /archives/tests/truc.txt` (test.txt existera toujours)
 ### Astuces 
 
 - `cp -r` permet de copier récursivement un dossier et tout ce qu'il contient (fichiers comme dossiers)
-
-## Lister les processus en cours
-
-La version en vidéo :
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/6fa2a3eb217c41c1b88a4a83d678b4dc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-- `ps` affiche les processus de l'utilisateur, `ps -e` tous les processus de la machine.
-- `top`, `htop` ou `glances` les affiche avec les consommations de mémoire, de processeur, etc.
