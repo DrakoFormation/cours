@@ -216,7 +216,7 @@ Avec l'opérateur `|` (appelé pipe), vous pouvez transmettre la sortie d'une co
 
 ## Enchaîner les commandes
 
-### Exécuter quoiqu'il arrive `||`
+### Exécuter si la première échoue `||`
 
 Pour exécuter une commande, **uniquement si la précédente renvoie une erreur**, utiliser `||`.
 
@@ -233,7 +233,7 @@ Pour exécuter 2 commandes, si la première réussie, utiliser `&&`.
 
 Dans l'exemple ci-dessus, si le fichier `unFichierPassionnant.txt` n'existe pas, le `echo` n'est pas exécuté.
 
-### Exécuter si la première réussie `;`
+### Exécuter quoiqu'il arrive `;`
 
 Pour exécuter des commandes, quoiqu'il arrive, les séparer par `;`.
 

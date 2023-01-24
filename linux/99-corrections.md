@@ -163,41 +163,180 @@ git push
 Rester dans le dossier `Work/Linux/exercices`. Pour les questions ci-dessous, écrivez votre réponse dans le fichier `Work/Linux/exercices/2/exercice2.txt`.
 
 - Quel est la taille (le poids en octets / kilo-octets) de `exercice1.txt` ?
+
+> Pour l'obtenir, utiliser la commande `ls -lh` (le h est optionnel)
+
 - Dans quel dossier est rangé **la configuration** d'un programme comme `apt` (ou `zsh`, si vous utilisez un Mac) ?
+
+> Dans le dossier `/etc/`
+
 - Avec les explications du cours, où se trouve **l'exécutable** de `apt` (ou `zsh`, si vous utilisez un Mac) ?
+
+> Dans le dossier `/bin/`
+
 - Quelle commande utiliser pour lister les processus actuellement actifs ? Afficher les résultats pour **tous les utilisateurs** du système et les ajouter à votre fichier.
+
+> `ps` pour les processus de l'utilisateur, `ps -e` pour outs les utilisateurs
+
 - Quelles sont les différences entre les commandes `less` et `more` ?
+
+> `less` est un programme interactif n'affichant rien dans la sortie standard (une fois fermé), alors que `more` écrit dans la sortie standard et rend la main une fois le fichier complètement parcourut.
+
 - Quelle commande utiliser pour demander "poliment" l'arrêt du programme java ?
+
+```bash
+pkill -SIGTERM java
+```
+
+Ou 
+
+```bash
+pkill -15 java
+```
+
+Ou 
+
+```bash
+killall -15 java
+```
+
 - Quelle commande utiliser pour arrêter le processus ayant l'identifiant 5240 ?
 
+```bash
+kill -SIGKILL 5240
+```
+
+Ou
+
+```bash
+kill -9 5240
+```
+
 - Créer un nouveau commit et le pousser sur GitHub.
+
+```bash
+git add .
+git commit -m "Troisième commit"
+git push
+```
 
 ## 3. Commandes avancées
 
 - Créer une branche (et s'y rendre) `exercice3`
+
+```bash
+git branch exercice3
+git checkout exercice3
+```
+
+Ou 
+
+```bash
+git checkout -b exercice3
+```
+
 - Créer un dossier `Work/Linux/exercices/3`
+
+```bash
+mkdir 3
+```
+
 - Que se passe-t-il si vous faites un commit ? (vous écrirez votre réponse après avoir créé le fichier `exercice3.txt`)
+
+> `git add .` renvoie une erreur : il n'y a rien à commit. Les dossiers ne sont pas visibles de Git, seuls les fichiers le sont. 
+
 - Se rendre dans ce dossier
+
+```bash
+cd 3
+```
+
 - Y créer un fichier `exercice3.txt`
+
+```bash
+touch exercice3.txt
+```
+
 - En une seule **ligne**, créer un dossier `Work/Linux/exercices/3/chaine/` et y créer un fichier `nouveau`
+
+```bash
+mkdir chaine && cd chaine
+```
+
 - Utiliser `cat` pour ouvrir vos 3 fichiers d'exercice à la fois et afficher le contenu avec less. Écrire ensuite la commande utilisée à la fin de `exercice3.txt`
+
+```bash
+cat ../../**/exercice*.txt | less
+```
+
+Ou 
+
+```bash
+cat ../exercice3.txt ../../1/exercices1.txt  ../../2/exercices2.txt | less
+```
+
 - Utiliser une seule **commande** pour :
-  - afficher la liste des fichiers, dossiers et tout leur contenu dans `Work/Linux/exercices` (avec les droits sur les fichiers) 
+  - afficher la liste des fichiers et dossiers dans `Work/Linux/exercices` (avec les droits sur les fichiers) 
   - et les ajouter dans le fichier `exercice3.txt`
+
+```bash
+# Revenir au dossier exercices/
+cd ../../
+ls -hAl >> 3/exercice3.txt
+```
 
 - Donner les droits suivants aux dossiers et fichiers de `Work/Linux/exercices/3` :
   - les utilisateurs peuvent lire, écrire et exécuter
   - le groupe peut lire
   - les autres n'ont aucun droit
+
+```bash
+chmod 740 -R 3
+```
+
+Ou 
+
+```bash
+chmod u+rwx -R 3
+chmod g=r -R 3
+chmod o-rwx -R 3
+```
+
 - Changer le groupe du dossier `Work/Linux/exercices/3/chaine/` pour appartenir au groupe `root` (`staff` pour Mac).
+
+```bash
+chown :root -R 3/chaine
+```
 
 - Créer un commit
 
+```bash
+git add .
+git commit -m "Quatrième commit"
+```
+
 - En une commande, supprimer tous les fichiers avec l'extension `.txt`, sans supprimer les dossiers
+
+```bash
+rm -rf **/*.txt
+```
+
 - Annuler cette suppression
+
+```bash
+git add .
+git reset --hard
+```
+
 - Écrire les deux commandes dans `exercice3.txt`
 
 - Créer un commit, pousser les modifications et créer une PR (Pull Request)
+
+```bash
+git add .
+git commit -m "Cinquième et dernier commit"
+git push
+```
 
 ## 4. Refaire les exercices précédents - version difficile
 
