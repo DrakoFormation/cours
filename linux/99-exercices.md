@@ -30,6 +30,12 @@ Avant de commencer, ouvrir un terminal.
 - Faire de même pour le fichier `exercice2.txt`
 - Créer un commit et le pousser
 
+### Correction
+
+>! mkdir -p Work/Linux/exercices
+
+>! cd Work/Linux/exercices
+
 ## 2. Fonctionnement général
 
 Rester dans le dossier `Work/Linux/exercices`. Pour les questions ci-dessous, écrivez votre réponse dans le fichier `Work/Linux/exercices/2/exercice2.txt`.
