@@ -29,7 +29,7 @@ module.exports = {
                 path: '/linux/',
                 collapsable: true,
                 children: linuxFiles,
-                sidebarDepth: 2
+                sidebarDepth: 1
             },
             {
                 title: 'PHP',
