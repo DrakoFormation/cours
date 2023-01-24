@@ -1,4 +1,4 @@
-# Exercices
+# Correction des exercices
 
 Tous ces exercices prennent place dans un terminal Linux et sont testés avec une machine Ubuntu. Si des adaptations sont nécessaires pour un Mac ou d'autres systèmes UNIX, merci de me le signaler ;) .
 
@@ -7,34 +7,156 @@ Avant de commencer, ouvrir un terminal.
 ## 1. Commandes de base
 
 - Créer un dossier `Work/Linux/exercices` dans votre dossier personnel
+
+`mkdir -p Work/Linux/exercices`
+
 - Se rendre dans ce dossier
+
+`cd Work/Linux/exercices`
+
 - Y créer un fichier `exercice1.txt` et copier/coller les commandes que vous avez entrées pour les énoncés précédents
+
+`nano exercice1.txt`
+
+Ajouter ce contenu dans le fichier :
+
+```bash
+mkdir -p Work/Linux/exercices
+cd Work/Linux/exercices
+```
+
 - Créer un fichier (vide) `exercice2.txt`
+
+```bash
+touch exercice2.txt
+```
+
 - Créer un dossier `1` et un dossier `2`
+
+```bash
+mkdir 1
+mkdir 2
+```
+
+Ou en une seule commande
+
+```bash
+mkdir 1 2
+```
+
 - Déplacer `exercice1.txt` dans `1` et `exercice2.txt` dans `2`
+
+```bash
+mv exercice1.txt 1
+mv exercice2.txt 2
+```
+
 - Afficher la liste des fichiers et dossiers dans `Work/Linux/exercices` (avec les droits sur les fichiers)
+
+```bash
+ls -l
+```
+
+:warning: Si vous êtes dans un autre dossier, il faudra mettre à jour le chemin. Si vous êtes dans le dossier `1`, vous pouvez faire comme ceci :
+
+```bash
+ls -l ..
+```
+
+Ou
+
+```bash
+cd ..
+ls -l
+```
+
 - Ajouter cet affichage à la fin du fichier `exercice1.txt`
+
+```bash
+nano 1/exercice1.txt
+```
+
 - Copier le fichier `exercice1.txt` dans un nouveau fichier `Work/Linux/exercices/1/copie.txt`
+
+```bash
+cp 1/exercice1.txt 1/copie.txt
+```
+
 - Créer un projet Git dans le dossier `Work/Linux/exercices`
+
+```bash
+git init
+```
+
 - Ajouter un premier commit
+
+```bash
+git add .
+git commit -m "Un premier commit"
+```
+
 - Créer un projet GitHub et inviter `Dreeckan` sur votre projet pour relecture
+
+> Se fait en ligne, sur votre compte GitHub
+
 - Pousser votre commit
 
+```bash
+git add remote origin git@github.com:VotreRepositoryDistant
+git branch -M
+git push -u origin main
+```
+
 - Créer un dossier `2/suite` dans votre dossier d'exercices
+
+```bash
+mkdir -p 2/suite
+```
+
 - Y créer un fichier vide `suite.md`
+
+```bash
+touch 2/suite/suite.md
+```
+
 - Afficher le contenu de `exercice1.txt` dans la sortie standard
+
+```bash
+cat 1/exercice1.txt
+```
+
+Ou 
+
+```bash
+more 1/exercice1.txt
+```
+
 - Copier-coller la commande utilisée dans `suite.md`
 - Afficher la dernière ligne de `exercice1.txt`
+
+```bash
+tail -n 1 1/exercice1.txt
+```
+
 - Copier-coller la commande utilisée dans `suite.md`
 - Copier le fichier `exercice1.txt` dans le dossier `2/suite`
+
+```bash
+cp 1/exercice1.txt 2/suite/
+```
+
 - Faire de même pour le fichier `exercice2.txt`
+
+```bash
+cp 2/exercice2.txt 2/suite/
+```
+
 - Créer un commit et le pousser
 
-### Correction
-
->! mkdir -p Work/Linux/exercices
-
->! cd Work/Linux/exercices
+```bash
+git commit -m "Second commit"
+git push
+```
 
 ## 2. Fonctionnement général
 
