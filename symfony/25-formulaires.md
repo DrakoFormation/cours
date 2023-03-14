@@ -495,3 +495,7 @@ On utilise la validation de manière assez constante :
 Vous trouverez une liste plus complète des assertions disponibles dans [la documentation sur la validation](https://symfony.com/doc/current/validation.html#constraints)
 
 Ainsi, si on valide le formulaire de création de tag avec une valeur invalide, un message d'erreur sera affiché (ce message peut d'ailleurs être personnalisé, mais je vous invite à consulter la documentation pour voir comment).
+
+### Jeton CSRF
+
+[Très bon article de Jérôme Gagneux (JoliCode) sur le sujet](https://jolicode.com/blog/comprendre-et-eviter-les-attaques-csrf-grace-a-symfony)
