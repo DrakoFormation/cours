@@ -114,4 +114,6 @@ Je vous mets quelques liens d'outils ou de sources de veille que j'utilise :
 - Des outils de gestion de tickets : [https://trello.com](https://trello.com), [https://github.com/new/project](https://github.com/new/project), [https://www.atlassian.com/fr/software/jira](https://www.atlassian.com/fr/software/jira), [https://glpi-project.org/fr/](https://glpi-project.org/fr/)
 - Pour les amateurs de la méthode pomodoro (travail de 25 minutes, 5 minutes de pause, et on recommence) : [https://pomodoro-tracker.com/](https://pomodoro-tracker.com/)
 - [Pierre Giraud](https://www.pierre-giraud.com/)
+- [Roadmap.sh](https://roadmap.sh/) (pour avoir une idée des compétences à acquérir pour les métiers autour du dev)
+- Les [patrons de conception (design patterns)](https://refactoring.guru/fr/design-patterns)
 - et bien sûr [https://formation-hb.drakolab.fr](https://formation-hb.drakolab.fr) ;)
