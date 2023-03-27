@@ -1,6 +1,8 @@
 # Déploiement
 
-Pour apprendre à installer, vous pouvez retrouver [une documentation sur le déploiement avec Ansible](https://e-vinrude.drakolab.fr/cookbooks/firstTimeDeploy.html) écrite pour mes collègues.
+## Un serveur et son fonctionnement
+
+![](/assets/img/deploy/schema-communication-serveur.svg)
 
 ## Déploiement par FTP
 

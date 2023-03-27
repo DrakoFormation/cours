@@ -77,6 +77,8 @@ Quelques usages courants :
 
 :warning: Dans tous les cas, si vous laissez un message vide, le commit ne sera pas enregistré.
 
+Vous pouvez également [ajouter des emojis dans vos messages](https://gitmoji.dev/), si vous le souhaitez.
+
 ## Log - Voir l'historique des commits
 
 En vidéo :
