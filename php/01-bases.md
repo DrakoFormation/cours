@@ -1,7 +1,7 @@
 # Bases du PHP
 
-Pour chaque section de ce cours, vous trouverez une série de petits exercices, à réaliser dans un projet dédié (idéalement, versionnez-le !).
-
+Pour chaque section de ce cours, vous trouverez une série de petits exercices, à réaliser dans un projet dédié (idéalement, versionnez-le !). 
+Nous allons réaliser un mini-site de QCM, tout au long de ce cours.
 
 Dans un premier temps, créez un dossier dans votre environnement de travail (exemple `C:\wamp\www\exercices`) et créez un fichier `index.php` dans ce dossier. Ajoutez-y une structure HTML classique dans laquelle nous allons travailler.
 
@@ -15,11 +15,10 @@ Exemple de fichier `index.php` :
       <title>Exercices</title>
   </head>
   <body>
-    
+    <h1>QCM</h1>
   </body>
 </html>
 ```
-
 
 ## Un script PHP
 
@@ -245,4 +244,29 @@ $compte = count($mesProduits);
 
 ## De la pratique
 
-#### 
+### A. Du php dans notre HTML
+
+Plutôt que de tout afficher en HTML directement, nous allons mettre les données nécessaires à l'affichage de notre QCM dans des variables. Pour le moment, affichons une question et ses réponses.
+
+1. Déclarez et initialisez une variable `$question` avec pour valeur : `Une superbe question de test, n'est-ce pas ?` (ou toute autre question plus pertinente qui vous passe par la tête ;) )
+2. Affichez le contenu de la variable `$question` dans une balise `<h2>`, dans le corps de la page `<body>`, après la balise `<h1>`.
+3. Déclarez et initialisez 4 variables 
+   - `$reponse1` avec pour valeur `Magnifique !`
+   - `$reponse2` avec pour valeur `Pas mal...`
+   - `$reponse3` avec pour valeur `Top !`
+   - `$reponse4` avec pour valeur `Obi-Wan Kenobi`
+4. Créez une liste ordonnée `<ol>` contenant 4 `<li>` et affichez les réponses dans chacun de ces `<li>`
+5. Ajoutez des cases à cocher `<input type="checkbox">` avant chaque réponse (:warning: n'oubliez pas les attributs `name` et `id`)
+6. mettez le texte de la réponse dans une balise `<label>`. Il faut que la case se coche si l'on clique sur le texte !
+
+### B. Manipuler les tableaux
+
+Maintenant, nous avons une question. Il serait intéressant de pouvoir en avoir plusieurs et toutes reprendrons le même affichage. 
+Pour le moment, nous avons un problème : nos données sont réparties dans 5 variables différentes. Il serait plus pratique de les regrouper dans une seule structure et nous allons utiliser un tableau.
+
+1. Déclarez une variable `$qcm`, contenant un tableau. Les données auront cette organisation :
+   - `$qcm` contient 2 entrées :
+     - `question`, une chaine de caractères : notre question à répondre
+     - `reponses`, un tableau donc chaque ligne est le texte d'une réponse
+2. Remplacez votre affichage précédent pour l'adapter à cette nouvelle structure
+3. Vous devriez avoir le même affichage

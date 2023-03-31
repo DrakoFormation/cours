@@ -89,7 +89,7 @@ module.exports = {
                 transformer: (timestamp, lang) => {
                     const moment = require('moment')
                     moment.locale('fr')
-                    return moment(timestamp).format('LL')
+                    return moment(timestamp).format('LLL')
                 }
             }
         ]
