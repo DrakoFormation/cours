@@ -5,7 +5,7 @@ Nous allons réaliser un mini-site de QCM, tout au long de ce cours.
 
 Dans un premier temps, créez un dossier dans votre environnement de travail (exemple `C:\wamp\www\exercices`) et créez un fichier `index.php` dans ce dossier. Ajoutez-y une structure HTML classique dans laquelle nous allons travailler.
 
-Exemple de fichier `index.php` :
+Fichier `index.php` de départ :
 
 ```html
 <!doctype html>
@@ -16,6 +16,9 @@ Exemple de fichier `index.php` :
   </head>
   <body>
     <h1>QCM</h1>
+    <form action="">
+        
+    </form>
   </body>
 </html>
 ```
@@ -249,7 +252,7 @@ $compte = count($mesProduits);
 Plutôt que de tout afficher en HTML directement, nous allons mettre les données nécessaires à l'affichage de notre QCM dans des variables. Pour le moment, affichons une question et ses réponses.
 
 1. Déclarez et initialisez une variable `$question` avec pour valeur : `Une superbe question de test, n'est-ce pas ?` (ou toute autre question plus pertinente qui vous passe par la tête ;) )
-2. Affichez le contenu de la variable `$question` dans une balise `<h2>`, dans le corps de la page `<body>`, après la balise `<h1>`.
+2. Affichez le contenu de la variable `$question` dans une balise `<h2>`, dans le corps ddu formulaire `<form>`.
 3. Déclarez et initialisez 4 variables 
    - `$reponse1` avec pour valeur `Magnifique !`
    - `$reponse2` avec pour valeur `Pas mal...`

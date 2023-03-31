@@ -7,7 +7,7 @@ En vidéo :
 - Fonction : fonction avec des arguments (ou non) retournant un résultat avec l'opérateur `return`
 - Procédure : fonction ne retournant aucun résultat
 
-Par défaut, les paramètres n'ont pas de type (et peuvent prendre n'importe lequel sans erreur).
+Par défaut, les paramètres n'ont pas de type (et peuvent prendre n'importe lequel sans erreurs).
 
 ```php
 // exemple de procédure
@@ -111,7 +111,6 @@ array_walk($tab, function (&$element) use ($nb) {
 });
 ```
 
-
 ## Portée des variables
 
 En vidéo :
@@ -180,3 +179,19 @@ function recursive($argument = 1) {
     // sauf si l'argument contient un nombre plus grand
 }
 ```
+
+
+## Exercices
+
+1. Créez une procédure (fonction ne renvoyant pas de résultat) pour gérer l'affichage d'une réponse :
+   - Elle reçoit en paramètre les informations d'une réponse
+   - Elle affiche la réponse (avec un `echo` ou équivalent)
+2. Créez une procédure pour gérer l'affichage d'une question :
+   - Elle reçoit en paramètre les informations d'une question
+   - Elle affiche la question et appelle la fonction d'affichage d'une réponse autant de fois que nécessaire.
+3. Créez une fonction qui :
+   - reçoit tout le QCM en paramètre
+   - renvoie un QCM avec :
+     - les questions dans un ordre aléatoire
+     - les réponses de chaque question dans un ordre aléatoire
+4. Utilisez ces procédures et fonctions pour gérer votre affichage

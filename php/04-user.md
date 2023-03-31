@@ -63,3 +63,7 @@ echo $_SESSION['login'];
 - Peuvent être un problème de sécurité selon les informations stockées. En effet, s'ils contiennent des données sensibles, celles-ci sont stockées (par défaut) dans un fichier texte dans l'ordinateur de l'utilisateur.
 - On peut créer un cookie avec la fonction `setCookie()` ([documentation](https://www.php.net/manual/fr/function.setcookie.php))
 - Récupérer le ou les cookies dans la variable superglobale `$_COOKIE`
+
+## Exercices
+
+### A. Calcul du score
