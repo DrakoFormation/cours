@@ -83,6 +83,15 @@ module.exports = {
         ],
         ['@vuepress/nprogress'],
         ['@vuepress/back-to-top'],
-        ['@vuepress/last-updated']
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    const moment = require('moment')
+                    moment.locale('fr')
+                    return moment(timestamp).format('LL')
+                }
+            }
+        ]
     ]
 }

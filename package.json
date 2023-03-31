@@ -4,7 +4,8 @@
     "@vuepress/plugin-nprogress": "^1.9.8",
     "glob": "^8.0.3",
     "vuepress": "^1.9.8",
-    "vuepress-plugin-robots": "^1.0.1"
+    "vuepress-plugin-robots": "^1.0.1",
+    "moment": "^2.29.4"
   },
   "scripts": {
     "dev": "npx vuepress dev .",
