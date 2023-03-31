@@ -4,14 +4,14 @@ Cette partie du cours parle de documentation et de normes... Mais aussi de norme
 
 ## En résumé
 
-- <abbr title="Php Standard Recommendation">PSR</abbr> est un ensemble de normes de formattage (manière d'écrire) du code. 
+- <abbr title="Php Standard Recommendation">PSR</abbr> est un ensemble de normes de "formattage" (manière d'écrire) du code. 
 - [La documentation PHP en Français](https://www.php.net/manual/fr/) peut répondre à vos questions sur tous les éléments du langage (y compris les fonctions de base et les extensions PHP)
 - Commenter son code est primordial pour aider d'autres développeurs à relire / utiliser notre code (y compris le "vous du futur")
 - Savoir trouver des sources fiables et adaptées en dehors de la doc est également important (questions **récentes** sur StackOverflow, articles de blog **récents**)
 
 ## PHP Doc
 
-- [La documentation PHP en Français](https://www.php.net/manual/fr/) pour **tout** savoir sur le langage, de sa syntaxe jusqu'aux extensions disponibles
+- [La documentation PHP en français](https://www.php.net/manual/fr/) pour **tout** savoir sur le langage, de sa syntaxe jusqu'aux extensions disponibles et leur fonctionnement
 - La [référence des fonctions](https://www.php.net/manual/fr/funcref.php) pour trouver toute la documentation sur les fonctions utiles de PHP
 
 ### Lire la documentation

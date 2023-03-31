@@ -48,6 +48,31 @@ Une variante "courte" existe pour les conditions simples.
 // Après le ?, l'instruction à exécuter si la condition est vraie
 // Après le :, l'instruction à exécuter si la condition est fausse
 ($variable === 1) ? echo 'ok' : echo 'pas ok';
+
+// Le code ci-dessus est équivalent à cette structure if/else 
+if ($variable === 1) {
+    echo 'ok';
+} else {
+    echo 'pas ok';
+}
+```
+
+:warning: Attention, les conditions ternaires peuvent très vite devenir difficile à relire. 
+
+### Opérateur de fusion Null
+
+Cet opérateur permet de vérifier l'existence d'une variable et, si elle n'est pas définie, de lui donner une valeur par défaut.
+
+```php
+// Si $tab['uneCle'] est définie, $action prendra sa valeur, sinon, $action aura la valeur "default"
+$action = $tab['uneCle'] ?? 'default';
+
+// Le code ci-dessus est équivalent à cette structure if/else 
+if (isset($tab['uneCle'])) {
+    $action = $tab['uneCle'];
+} else {
+    $action = 'default';
+}
 ```
 
 ### Opérateurs courants
@@ -118,3 +143,6 @@ while ($j < count($elements)) {
 
 var_dump($elements); // Affichera [5, 7, 16, 46]
 ```
+
+## Exercices
+

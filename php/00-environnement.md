@@ -26,7 +26,7 @@ Je ne peux que vous recommander la vidéo de [Grafikart](https://grafikart.fr/) 
 
 ## Alternative pour les Macs - MAMP
 
-Si vous avez un Mac, vous pouvez installer [Mamp](https://www.mamp.info/en/downloads/), un programme "équivalent" à Wamp, mais pour Mac. Il a toutefois quelques soucis (non affichage des erreurs, par défaut) et ous allons l'améliorer un peu !
+Si vous avez un Mac, vous pouvez installer [Mamp](https://www.mamp.info/en/downloads/), un programme "équivalent" à Wamp, mais pour Mac. Il a toutefois quelques soucis (non-affichage des erreurs, par défaut) et ous allons l'améliorer un peu !
 
 Je me base sur [cet article de Josh Buchea](https://joshbuchea.com/mac-enable-xdebug-in-mamp/) pour activer XDebug (pour rendre vos `var_dump()` plus pratiques).
 

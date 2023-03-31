@@ -1,3 +1,26 @@
+# Bases du PHP
+
+Pour chaque section de ce cours, vous trouverez une série de petits exercices, à réaliser dans un projet dédié (idéalement, versionnez-le !).
+
+
+Dans un premier temps, créez un dossier dans votre environnement de travail (exemple `C:\wamp\www\exercices`) et créez un fichier `index.php` dans ce dossier. Ajoutez-y une structure HTML classique dans laquelle nous allons travailler.
+
+Exemple de fichier `index.php` :
+
+```html
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="UTF-8">
+      <title>Exercices</title>
+  </head>
+  <body>
+    
+  </body>
+</html>
+```
+
+
 ## Un script PHP
 
 En vidéo : 
@@ -220,3 +243,6 @@ unset($mesProduits[0]);
 $compte = count($mesProduits); 
 ```
 
+## De la pratique
+
+#### 
