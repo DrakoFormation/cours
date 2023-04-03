@@ -4,6 +4,12 @@
 
 ![](/assets/img/deploy/schema-communication-serveur.svg)
 
+Les étapes représentées dans le schéma ci-dessus :
+1. Un utilisateur demande le site `https://qcm.drakolab.fr`
+2. La requête est transmise à un serveur <abbr title="Domain Name System">DNS</abbr>, qui va faire le lien entre le nom de domaine et une adresse IP
+3. La requête est transmise à cette adresse IP, qui correspond à un serveur, sur lequel est installé un serveur Web (Nginx/Apache)
+4. Le serveur Web fait le lien entre l'url demandée et un ensemble de fichiers et traite la requête selon la configuration du site
+
 ## Déploiement par FTP
 
 En vidéo :
