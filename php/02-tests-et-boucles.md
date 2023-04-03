@@ -137,7 +137,7 @@ var_dump($elements); // Affichera [3, 5, 14, 44]
 
 $j = 0;
 while ($j < count($elements)) {
-    $elements[$i] += 2;
+    $elements[$j] += 2;
     $j++;
 }
 
@@ -151,16 +151,39 @@ var_dump($elements); // Affichera [5, 7, 16, 46]
 Dans notre affichage précédent, nous affichions chaque élément l'un après l'autre et beaucoup de code était répété. Que se passerait-il si nous avions 5 questions dans notre QCM ? 1 000 questions ? 
 Sur le long terme, afficher des éléments identiques l'un après l'autre nous fait perdre du temps. Parcourir une structure complexe (comme un tableau) à l'aide de boucles nous permet de **factoriser** notre code.
 
-1. Ajoutez une seconde question dans votre tableau `La vie est-elle un long fleuve tranquille ?` avec comme réponses :
+Nous allons modifier la structure de stockage de nos données pour ajouter des questions : 
+
+```php
+// $qcm est un tableau, contenant toutes les questions et les réponses associées
+$qcm = [
+    // Chaque ligne de $qcm est un tableau contenant la question et ses réponses
+    [
+        // L'index "question" permet de récupérer facilement la question
+        'question' => "Une superbe question de test, n'est-ce pas ?",
+        // L'index "reponses" permet de récupérer facilement les réponses
+        'reponses' => [
+            // Les réponses n'ont ici pas d'index,
+            // elles sont numérotées automatiquement.
+            // (0, 1, 2, 3, etc.)
+            'Magnifique !',
+            'Pas mal...',
+            'Top !',
+            'Obi-Wan Kenobi',
+        ],
+    ],
+];
+```
+
+1. Suivant ce modèle, ajoutez une seconde question dans votre tableau `La vie est-elle un long fleuve tranquille ?` avec comme réponses :
    - `Oui`
    - `Non`
 2. Utilisez une boucle `foreach` pour afficher les questions du QCM.
-3. Utilisez une boucle `for` pour afficher les réponses à chaque question.
+3. À l'intérieur du `foreach`, utilisez une boucle `for` pour afficher les réponses à chaque question.
 
 ### B. Conditions
 
 1. Sur la balise `<li>` des questions **paires**, ajoutez la classe `even`.
-2. Sur la balise `<li>` des réponses **paires**, ajoutez la classe `even`
+2. Sur la balise `<li>` des réponses **paires**, ajoutez la classe `even`.
 3. Ajoutez un peu de style pour distinguer ces éléments : 
    ```css
    .even {

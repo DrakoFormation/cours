@@ -252,7 +252,7 @@ $compte = count($mesProduits);
 Plutôt que de tout afficher en HTML directement, nous allons mettre les données nécessaires à l'affichage de notre QCM dans des variables. Pour le moment, affichons une question et ses réponses.
 
 1. Déclarez et initialisez une variable `$question` avec pour valeur : `Une superbe question de test, n'est-ce pas ?` (ou toute autre question plus pertinente qui vous passe par la tête ;) )
-2. Affichez le contenu de la variable `$question` dans une balise `<h2>`, dans le corps ddu formulaire `<form>`.
+2. Affichez le contenu de la variable `$question` dans une balise `<h2>`, dans le corps du formulaire `<form>`.
 3. Déclarez et initialisez 4 variables 
    - `$reponse1` avec pour valeur `Magnifique !`
    - `$reponse2` avec pour valeur `Pas mal...`

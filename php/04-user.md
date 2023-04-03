@@ -64,6 +64,14 @@ echo $_SESSION['login'];
 - On peut créer un cookie avec la fonction `setCookie()` ([documentation](https://www.php.net/manual/fr/function.setcookie.php))
 - Récupérer le ou les cookies dans la variable superglobale `$_COOKIE`
 
+## Sécuriser les données
+
+<abbr title="Ne faites jamais confiance aux saisies utilisateur">Never Trust User Inputs</abbr> est un adage très couramment utilisé dans la programmation. 
+
+Pour des raisons de sécurité, principalement
+
 ## Exercices
 
 ### A. Calcul du score
+
+### B.
