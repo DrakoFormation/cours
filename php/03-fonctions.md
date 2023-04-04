@@ -192,6 +192,6 @@ function recursive($argument = 1) {
 3. Créez une fonction qui :
    - reçoit tout le QCM en paramètre
    - renvoie un QCM avec :
-     - les questions dans un ordre aléatoire
+     - les questions dans un ordre aléatoire (voir [les fonctions de tri de PHP](https://www.php.net/manual/fr/array.sorting.php))
      - les réponses de chaque question dans un ordre aléatoire
 4. Utilisez ces procédures et fonctions pour gérer votre affichage

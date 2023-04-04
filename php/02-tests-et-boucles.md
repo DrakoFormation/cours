@@ -182,8 +182,8 @@ $qcm = [
 
 ### B. Conditions
 
-1. Sur la balise `<li>` des questions **paires**, ajoutez la classe `even`.
-2. Sur la balise `<li>` des réponses **paires**, ajoutez la classe `even`.
+1. Sur la balise `<h2>` des **questions paires**, ajoutez la classe `even`.
+2. Sur la balise `<li>` des **réponses paires**, ajoutez la classe `even`.
 3. Ajoutez un peu de style pour distinguer ces éléments : 
    ```css
    .even {
