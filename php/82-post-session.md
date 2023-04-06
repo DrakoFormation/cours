@@ -21,7 +21,7 @@ Créons une nouvelle page de connexion, avec un formulaire. Il s'agit maintenant
 
 ### Correction des exercices 13 et 14
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/4d59234c41014fb59cfed2dfef982aba" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/K4EhNb3wHzc" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 15. Mise en place de la session
 
@@ -63,7 +63,7 @@ if (!empty($_GET['disconnected']) && $_GET['disconnected'] == 1) {
 
 ### Correction des exercices 15 et 16
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/40eb9f646d0d432facb212ff04491be2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/awE1mpV75Rk" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 
 ## 17. Vérification du mot de passe
@@ -88,4 +88,4 @@ Validons maintenant les données entrées dans le formulaire, pour être dans de
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/9239329039304a7da2ea339bebcd5929" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/p0kVcURQqcw" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>

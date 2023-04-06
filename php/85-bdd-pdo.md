@@ -23,7 +23,7 @@ Correction :
   
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/83cf03d0bd08402db4eadcc00e3cc8ab" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/8rv2uU_YaSQ" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 27. Formulaire de contact, en BdD
 
@@ -32,7 +32,7 @@ Correction :
   
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c9e3d9aa6dc04ae1800c6292268bdeaf" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/wO0-9wz_Fqo" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 28. Utiliser les données de la BdD
 
@@ -55,7 +55,7 @@ Choisissez **l'une des deux** méthodes suivantes pour remplir nos bonnets depui
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f4566ed9b7944d3aac0233bab24cb9c9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/e-_-ni-t1s0" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 
 ## 29. MVC et namespaces (:warning: difficile)
@@ -72,11 +72,11 @@ Ce que nous voulons faire :
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/cf40ff999add49d49ad1d0e3c30ff228" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/L72w3ncAHRE" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a6c18a2f40594140845671e73f2223a5" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/oS18WpW99eM" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2bd430e7ee934262a7b1fe7335a93933" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/Oq7ELSBr6V0" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## Révisions
 

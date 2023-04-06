@@ -23,7 +23,7 @@ Commençons par afficher une première page. Pour cela, il nous faut quelques do
 
 ### Correction 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/718d5d6b0813452ebb37b67e43ea5c18" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/b_yjqBY0p60" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 2. Tableaux imbriqués
 
@@ -39,17 +39,17 @@ Nous voulons maintenant un peu plus d'informations sur nos produits. Commençons
 
 ### Correction 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/bb4fc2d4018d4e66983e9340607d2e52" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/VlCqX0J7Opo" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 3. Conditions
 
-On va faire ressortir visuellement les prix de nos produits, et encore plus ceux qui ne sont pas cher !
+On va faire ressortir visuellement les prix de nos produits, et encore plus ceux qui ne sont pas chers !
 
 - Si un prix est inférieur ou égal à 12€, afficher le prix en vert, sinon l'afficher en bleu.
 
 ### Correction 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/976a00bc95df4564a49c8df2d1d6b411" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/g-Unz6AniCo" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 4. Fonctions
 
@@ -61,7 +61,7 @@ Une pensée pour les professionnels qui ont besoin de se couvrir la tête ! Pour
 
 ### Correction 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/080ae051442540df857dc21b677e4e04" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/G2VFNOS29cQ" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 5. Manipulation des chaines de caractère et des variables
 
@@ -72,4 +72,4 @@ Factorisons un peu notre code, en réduisant l'appel d'une ligne du tableau à l
 
 ### Correction 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/ed056411f93b411f890b0d603f4131fa" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/FBX5-V6mphc" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>

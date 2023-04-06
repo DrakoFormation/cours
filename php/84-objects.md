@@ -29,7 +29,7 @@ Correction :
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c9a97caf0c784c46a7fa2d0cbf5555b2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/Ys-WiNvFkf0" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 23. Liste et filtres
 
@@ -63,7 +63,7 @@ Correction :
 
 ### Correction des exercices 23 et 24
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/129ebf5575bb411180767033c7116866" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/Yp98gIw0A08" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 25. Continuer la conversion en objets
 
@@ -85,4 +85,4 @@ Correction :
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/7cea0beb1d9846e48245a82aeb737cc2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/k-QsJV2Ua6Q" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>

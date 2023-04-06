@@ -31,7 +31,7 @@ ob_end_flush();
 
 Correction de l'exercice 18 :
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/0aef072ce1a547f4a7dc2e49ca7dbf92" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/n4AFYOcgNrU" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 19. Ajouter des éléments au panier
 
@@ -70,7 +70,7 @@ Nous avons des produits, il ne nous reste plus qu'à les acheter ! (faire sembla
 
 ### Correction des exercices 19 et 20
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2482646b145c4f009f97bea3058e7bd2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/mHznhFvGDps" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 21. Ajouter un formulaire de contact
 
@@ -100,5 +100,4 @@ Nous avons des produits, il ne nous reste plus qu'à les acheter ! (faire sembla
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/bdb0d2fbd02c4a78900795d9a8f6ce8b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
+<iframe class="yt-video" src="https://www.youtube.com/embed/iGNXQ66WOkw" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>

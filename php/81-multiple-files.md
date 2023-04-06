@@ -19,9 +19,9 @@ Nous allons maintenant séparer notre code en plusieurs éléments, à thème. L
     - Un pour le HTML
 - Appeler ces fichiers dans le HTML ([utiliser `include` pour appeler les différents fichiers](https://www.php.net/manual/fr/function.include.php) où vous le souhaitez)
 
-### Correction  
+### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/74ac07352bd2423f8a40a5ff41139e85" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/UfTzcn3geeY" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 7. Utiliser git
 
@@ -32,9 +32,9 @@ Nous allons maintenant séparer notre code en plusieurs éléments, à thème. L
 - Partager le lien (en privé sur Discord ou en m'invitant sur le projet)
 - Créer une branche `ajout-layout` pour l'exercice suivant
 
-### Correction 
+### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/08d6137827b64decaca6b9cc6dc5f92e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/33hqA4Ra_UE" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 8. Mise en place d'un layout
 
@@ -58,7 +58,7 @@ L'idée est ici de regrouper la plus grande partie du code commun, pour l'inclur
 
 ### Correction des exercices 8, 9 et 10
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/d5f13adba7f349a983518db6eaa43d1b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/chlHvQaAwjQ" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 11. Création d'une page d'accueil
 
@@ -73,7 +73,7 @@ L'idée est ici de créer une seconde page `list.php` qui va contenir notre tabl
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/53f34956b14c48c48cb0dcd7e5de0e40" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/OJZXnrGBGlE" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 12. Lier nos pages
 
@@ -84,7 +84,7 @@ Maintenant que nous avons deux pages, nous voulons naviguer de l'une à l'autre.
 
 Correction en vidéo :
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2fd04130c40a48fea814ad382fcb0971" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/uAqU8k5tq3A" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ### Faire relire votre code (Pull Request)
 
@@ -94,7 +94,7 @@ Correction en vidéo :
 
 ### Correction
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/3d1a8241587b4259bd1fd9ed8c8936a6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/5F9AI0DR3zE" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
 ## 13. Mettre en place un menu
 
@@ -107,4 +107,4 @@ Correction en vidéo :
 
 Correction vidéo :
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e4796b31a58947d48c6d1ab3e08f4ac7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe class="yt-video" src="https://www.youtube.com/embed/Pl_AG57wwgQ" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
