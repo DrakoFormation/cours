@@ -1,4 +1,4 @@
-# Exercices PHP (partie 2)
+# Exercices - Séparer en plusieurs fichiers
 
 Pré-requis :
 - avoir un environnement de travail ([Wamp](https://www.wampserver.com/) / [Xampp](https://www.apachefriends.org/fr/index.html) / [Mamp](https://www.mamp.info/en/downloads/) ou équivalent)
