@@ -72,9 +72,33 @@ Les grands principes des API REST (voir Symfony pour la mise en place rapide d'u
 
 
 
-## [Exercices](90-exercices.md)
+## [Exercices 1 à 5](80-bases.md)
 
-Des exercices à pratiquer tout au long de ce cours
+Pratiquer les bases de PHP
+
+## [Exercices 6 à 13](81-multiple-files.md)
+
+Séparer notre code en plusieurs fichiers
+
+## [Exercices 14 à 17](82-post-session.md)
+
+Manipuler les données `POST` et `SESSION`
+
+## [Exercices 18 à 21](83-cart-get-session.md)
+
+Front controller, création d'un panier (`$_GET` et `$_SESSION`) et validation des champs d'un formulaire
+
+## [Exercices 22 à 25](84-objects.md)
+
+Manipulation des objets PHP
+
+## [Exercices 26 à 29](85-bdd-pdo.md)
+
+Base de données avec PDO
+
+## Révisions
+
+[Des exercices de révision](https://github.com/Dreeckan/exercices-php/blob/main/revisions.md) sont également disponibles pour revoir la plupart des points (:warning: les exercices utilisent les objets PHP).
 
 ## [Projet - montage d'ordinateur](91-computer-preparation.md)
 
