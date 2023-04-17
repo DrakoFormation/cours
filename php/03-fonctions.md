@@ -179,19 +179,3 @@ function recursive($argument = 1) {
     // sauf si l'argument contient un nombre plus grand
 }
 ```
-
-
-## Exercices
-
-1. Créez une procédure (fonction ne renvoyant pas de résultat) pour gérer l'affichage d'une réponse :
-   - Elle reçoit en paramètre les informations d'une réponse
-   - Elle affiche la réponse (avec un `echo` ou équivalent)
-2. Créez une procédure pour gérer l'affichage d'une question :
-   - Elle reçoit en paramètre les informations d'une question
-   - Elle affiche la question et appelle la fonction d'affichage d'une réponse autant de fois que nécessaire.
-3. Créez une fonction qui :
-   - reçoit tout le QCM en paramètre
-   - renvoie un QCM avec :
-     - les questions dans un ordre aléatoire (voir [les fonctions de tri de PHP](https://www.php.net/manual/fr/array.sorting.php))
-     - les réponses de chaque question dans un ordre aléatoire
-4. Utilisez ces procédures et fonctions pour gérer votre affichage

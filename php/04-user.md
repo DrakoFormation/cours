@@ -69,9 +69,3 @@ echo $_SESSION['login'];
 <abbr title="Ne faites jamais confiance aux saisies utilisateur">Never Trust User Inputs</abbr> est un adage très couramment utilisé dans la programmation. 
 
 Pour des raisons de sécurité, principalement
-
-## Exercices
-
-### A. Calcul du score
-
-### B.
