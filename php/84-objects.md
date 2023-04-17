@@ -13,7 +13,6 @@ Correction :
 
 - Créer une nouvelle branche git `utilisation-objets`
 - Création d'une première classe `Beanie` qui va stocker nos données de bonnets
-- Ajouter des constantes (tailles et matières) pour définir les valeurs du formulaire de tri
 - Définir propriétés et méthodes
 - Remplacer les tableaux dans `$mesProduits` par des objets (`$mesProduits` devient alors un tableau contenant des objets `Beanie`)
 - Mettre à jour nos différentes pages en conséquence 
@@ -34,6 +33,7 @@ Correction :
 ## 23. Liste et filtres
 
 - Créer une nouvelle branche git `ajout-filtres`
+- Ajouter des constantes (tailles et matières) dans votre classe pour gérer les énoncés suivants
 - Sur la liste des produits `list.php`, ajouter des filtres (formulaire, avec la `method` à `POST`) :
   - Par taille (S, M, L, XL)
   - Par matière (laine, soie, coton, cachemire, etc.)
