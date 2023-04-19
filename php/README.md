@@ -96,7 +96,7 @@ Manipulation des objets PHP
 
 Base de données avec PDO
 
-## Révisions
+### Révisions
 
 [Des exercices de révision](https://github.com/Dreeckan/exercices-php/blob/main/revisions.md) sont également disponibles pour revoir la plupart des points (:warning: les exercices utilisent les objets PHP).
 

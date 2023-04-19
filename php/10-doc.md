@@ -355,7 +355,7 @@ Le *FQCN* (Fully Qualified Class Name) est composé de :
 
 Installation dans VS Code :
 
-- Installer le plugin mentionné dans la liste ci-dessus
+- Installer [le plugin](https://github.com/junstyle/vscode-php-cs-fixer) mentionné dans la liste ci-dessus
 - [Télécharger PHP CS Fixer](https://cs.symfony.com/download/php-cs-fixer-v3.phar) (je le télécharge dans le dossier `www` de mon wamp)
 - Configurer l'extension avec le chemin de php et celui de php-cs-fixer
 
