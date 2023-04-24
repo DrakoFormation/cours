@@ -497,5 +497,4 @@ $user = $sth->fetch();
 ## Exercices
 
 Pour vous entrainer à manipuler PDO, utiliser
-- les [exercices sur notre site de bonnets](85-bdd-pdo.md) (à partir de l'exercice 26)
-- le [repository Github dédié à divers exercices](https://github.com/Dreeckan/exercices-php/).
+- les [exercices sur notre site de bonnets](85-bdd-pdo.md) (à partir de l'exercice 26).

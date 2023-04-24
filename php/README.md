@@ -53,10 +53,6 @@ Plusieurs outils nous permettent de récupérer la classe d'un objet ou de véri
 
 Utiliser les classes abstraites, les interfaces et les traits pour éviter les répétitions de code.
 
-### Exercices POO
-
-Pour vous entrainer à manipuler des objets PHP, utiliser le [repository Github dédié à divers exercices](https://github.com/Dreeckan/exercices-php/). Les exercices 1 à 7 concernent cette partie.
-
 ## [PDO](30-pdo.md)
 
 Utiliser une base de données MySQL grâce à l'objet PDO de PHP
