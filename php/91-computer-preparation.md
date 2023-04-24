@@ -233,6 +233,10 @@ Ouvrir cette page marque les commentaires comme lus par l'équipe montage.
 
 ### Marquer un modèle comme monté
 
+Sur le détail du modèle ou la liste des modèles, un bouton doit être présent pour qu'un monteur puisse indiquer que ce modèle a été fabriqué. 
+
+:warning: Il faut alors que les pièces utilisées soient déduites du stock.
+
 ## Critères d'acceptation (notation)
 
 Pour valider le rendu, voici ce qui est attendu par votre chef de projet, pour chacun d'entre vous : 
