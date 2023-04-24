@@ -1,4 +1,4 @@
-# PDO (PHP Data Object)
+# Manipuler la BdD avec PDO (PHP Data Object)
 
 ## L'extension PDO
 

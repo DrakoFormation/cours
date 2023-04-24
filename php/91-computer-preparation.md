@@ -1,4 +1,4 @@
-# Projet : montage d'ordinateurs
+# Projet - montage d'ordinateurs
 
 Nous allons mettre en place un projet Php, rendu sur Github/Gitlab, en utilisant des tickets (outil à définir). Le processus de travail doit être comme suit : 
 - utiliser Git pour enregistrer les modifications de chaque développeur
@@ -231,6 +231,7 @@ Une page de détails sur un modèle doit donner rapidement les informations néc
 Sous ces informations, afficher un formulaire de commentaire et la liste des commentaires précédents (le plus récent en haut), avec la date et le nom d'utilisateur l'ayant créé.
 Ouvrir cette page marque les commentaires comme lus par l'équipe montage.
 
+### Marquer un modèle comme monté
 
 ## Critères d'acceptation (notation)
 

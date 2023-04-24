@@ -57,6 +57,31 @@ class Foo implements Test, Test2, Test3
 }
 ```
 
+## instanceof
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/bb19555096894924b4dd51d4e4af0564" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+Le mot-clé `ìnstanceof` permet de vérifier si une variable est une instance d'une classe, d'une interface ou d'une de ses filles.
+
+```php
+// Bar.php
+class Bar {}
+// Foo.php
+class Foo extends Bar implements TestInterface {}
+// Baz.php
+class Baz implements TestInterface {}
+// index.php
+$foo = new Foo();
+$bar = new Bar();
+$baz = new Baz();
+var_dump($foo instanceof Foo); // Bool (true)
+var_dump($bar instanceof Bar); // Bool (true)
+var_dump($foo instanceof Test); // Bool (false)
+var_dump($baz instanceof TestInterface); // Bool (true)
+var_dump($bar instanceof TestInterface); // Bool (false)
+var_dump($foo instanceof TestInterface); // Bool (true)
+```
+
 ## Traits
 
 [La documentation](https://www.php.net/manual/fr/language.oop5.traits.php)

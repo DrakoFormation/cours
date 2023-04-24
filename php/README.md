@@ -45,11 +45,7 @@ Apprendre la Programmation Orientée Objet (POO) en PHP
 
 Une fonctionnalité majeure du PHP Objet est l'héritage, permettant à une classe d'utiliser les propriétés et méthodes d'une autre (parent).
 
-### [Outils de manipulation des classes](22-outils.md)
-
-Plusieurs outils nous permettent de récupérer la classe d'un objet ou de vérifier le type d'un objet. 
-
-### [Factoriser les classes](23-factorize.md)
+### [Factoriser les classes](22-factorize.md)
 
 Utiliser les classes abstraites, les interfaces et les traits pour éviter les répétitions de code.
 
