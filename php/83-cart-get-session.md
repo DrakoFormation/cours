@@ -17,7 +17,7 @@ Créer une nouvelle page pour afficher les informations complètes sur un bonnet
 - Cette page doit récupérer un identifiant de bonnet dans l'url (en utilisant `$_GET`)
 - Dans cette page, ajouter toutes les informations disponibles pour un bonnet (:warning: penser à la mettre à jour dans les autres exercices)
 
-## 18. Créer un front controller
+## 18.1. Créer un front controller
 
 Le but du front controller est de réduire (encore) les répétitions de code, en gérant **tous** les éléments constants (inclusions, démarrage de session, etc.).
 
