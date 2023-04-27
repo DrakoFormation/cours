@@ -37,7 +37,7 @@ ob_start();
 ob_end_flush();
 ```
 
-Correction de l'exercice 18 :
+### Correction
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/n4AFYOcgNrU" title="Exercice 1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 
