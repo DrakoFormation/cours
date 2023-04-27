@@ -9,6 +9,14 @@ Correction :
 - En vidéo, tout le long des exercices (après l'énoncé correspondant)
 - Dans le code, sur [le repository dédié aux corrections sur GitHub](https://github.com/Dreeckan/beanies/pulls?q=is%3Apr). 
 
+## 18.0. Afficher les détails d'un bonnet
+
+Créer une nouvelle page pour afficher les informations complètes sur un bonnet.
+
+- Créer une page `beanie.php` 
+- Cette page doit récupérer un identifiant de bonnet dans l'url (en utilisant `$_GET`)
+- Dans cette page, ajouter toutes les informations disponibles pour un bonnet (:warning: penser à la mettre à jour dans les autres exercices)
+
 ## 18. Créer un front controller
 
 Le but du front controller est de réduire (encore) les répétitions de code, en gérant **tous** les éléments constants (inclusions, démarrage de session, etc.).
