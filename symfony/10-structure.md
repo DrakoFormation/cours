@@ -123,3 +123,32 @@ La commande `composer install` permet de récupérer les versions définies dans
 La commande `composer update` tente de mettre à jour vos dépendances, en fonction des contraintes définies dans le fichier `composer.json`. **Attention**, cette commande met à jour le fichier `.lock`.
 
 Si vous avez besoin d'installer une nouvelle dépendance, il faudra utiliser `composer require nomDuPaquetAInstaller`. La commande exacte est en général fournie dans la documentation d'installation de la dépendance (et il est préférable de suivre cette source). Certains bundles utilisent des recettes pour créer des fichiers supplémentaires, mettre en place une configuration de base, etc. et il vaut mieux les y autoriser ! Ces recettes sont là pour vous faire gagner du temps, et elles le font bien ;) .
+
+## Fonctionnement global
+
+```mermaid
+%%{init: {'theme':'dark'}}%%
+sequenceDiagram
+    Utilisateur->>FrontController: Je veux la page /test
+    FrontController->>Routeur: Qui fait le traitement ?
+    Routeur->>FrontController: Demande au contrôleur X
+    FrontController->>Contrôleur: Donne moi une réponse
+    Contrôleur-->>Modèle: Donne moi les données
+    Modèle-->>Contrôleur: Les voilà
+    Contrôleur->>Vue: Crée moi un affichage
+    Vue->>Contrôleur: Le voilà
+    Contrôleur->>FrontController: Voilà la réponse
+    FrontController-)Utilisateur: Et voilà !
+```
+
+Le traitement d'une requête avec Symfony se fait en 10 étapes (pour résumer ;) ) :
+1. L'utilisateur demande une page `/test`. C'est le FrontController qui la reçoit
+2. Le FrontController demande le contrôleur correspondant à `/test` au routeur
+3. Le routeur donne l'objet et la méthode à appeler
+4. Le FrontController appelle le contrôleur et sa méthode
+5. Le contrôleur appelle le modèle (BdD) pour récupérer les données si besoin
+6. Le modèle renvoie les données demandées
+7. Le contrôleur traite ses données (fait ses calculs) et les envoie à la vue pour construire un affichage
+8. Le moteur de template renvoie la vue construite
+9. Le contrôleur construit une réponse et l'envoie au FrontController
+10. Le FrontController renvoie la réponse à l'utilisateur
