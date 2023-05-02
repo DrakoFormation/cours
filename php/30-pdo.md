@@ -119,7 +119,7 @@ $statement = $connection->query($sql);
 
 // Si on souhaite récupérer tous nos résultats dans un tableau associatif,
 // on utilise fetchAll() 
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+$results = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 // On parcourt nos résultats
 foreach  ($results as $result) {

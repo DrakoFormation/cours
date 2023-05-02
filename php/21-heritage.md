@@ -11,11 +11,12 @@ On parle d'héritage quand une classe hérite d'une autre. C'est-à-dire qu'elle
 Prenons le schéma suivant et voyons son implémentation en PHP :
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 classDiagram
   class Beanie {
-    -material: string 
-    +getMaterial()
-    +setMaterial(material)
+    -propriete: string 
+    +getPropriete()
+    +setPropriete(propriete)
   }
   
   class EarflapBeanie {
@@ -28,6 +29,7 @@ classDiagram
     -uneAutreProp: string
   }
   Beanie <|-- SkullCap
+end
 ```
 
 

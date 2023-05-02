@@ -39,7 +39,7 @@ Une interface permet de forcer l'implémentation de certaines méthodes dans un 
 
 :warning: Une classe peut implémenter plusieurs interfaces.
 
-:warning: Une interface peut étendre un ou plusieurs interfaces.
+:warning: Une interface peut étendre une ou plusieurs interfaces.
 
 ```php
 interface Test
