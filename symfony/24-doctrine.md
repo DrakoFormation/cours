@@ -565,8 +565,8 @@ class BlogController extends AbstractController
         $entityManager->persist($tag);
         $entityManager->persist($article);
 
-        // Noter que les entrée n'existent pas encore en base.
-        // Elle n'existent qu'une fois que nous appelons la méthode flush de l'entity manager.
+        // Noter que les entrées n'existent pas encore en base.
+        // Elles n'existent qu'une fois que nous appelons la méthode flush de l'entity manager.
         // Vous pouvez voir la méthode persist comme le commit de Git.
         $entityManager->flush();
 
