@@ -186,12 +186,10 @@ $results = $statement->fetchAll();
 - Les paramètres sont simplement numérotés
 
 ```php
-// la méthode bindParam() attend une variable en second paramètre (passage par référence).
-// Lui donner une valeur directement provoque une erreur.
-$param = "Test";
+// la méthode bindValue() attend une valeur en second paramètre (qu'elle soit dans une variable ou non, peu importe).
 $statement = $connection->prepare('SELECT fullname FROM student WHERE fullname LIKE ?');
 // Attention, la numérotation des paramètres commence à 1, pas à 0
-$statement->bindParam(1, $param, PDO::PARAM_STR);
+$statement->bindValue(1, "Test", PDO::PARAM_STR);
 $statement->execute();
 ```
 
@@ -200,9 +198,10 @@ L'exemple ci-dessus est équivalent à :
 ```php
 // la méthode bindParam() attend une variable en second paramètre (passage par référence).
 // Lui donner une valeur directement provoque une erreur.
+$param = "Test";
 $statement = $connection->prepare('SELECT fullname FROM student WHERE fullname LIKE ?');
 // Attention, la numérotation des paramètres commence à 1, pas à 0
-$statement->bindValue(1, "Test", PDO::PARAM_STR);
+$statement->bindParam(1, $param, PDO::PARAM_STR);
 $statement->execute();
 ```
 
@@ -230,26 +229,14 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
+
+:warning: En général, on va utiliser `bindValue()`, `bindParam()` ne sert que dans **quelques cas spécifiques**.
+
 ### Les paramètres nommés
 
 - Pour lier des paramètres (variables PHP) à une requête
 - Les paramètres sont nommés, permettant de les repérer plus facilement
 - Un paramètre commence toujours par `:` suivi d'un nom
-
-```php
-// la méthode bindParam() attend une variable en second paramètre (passage par référence).
-// Lui donner une valeur directement provoque une erreur.
-$param = "Test";
-$statement = $connection->prepare('INSERT INTO student (fullname) VALUES (:name)');
-// Notre paramètre :name sera remplacé par la valeur de $param, à l'exécution de la requête
-$statement->bindParam(':name', $param, PDO::PARAM_STR);
-for ($i = 0; $i < 10; $i++) {
-    $param .= $i;
-    $statement->execute();
-}
-```
-
-L'exemple ci-dessus est équivalent à :
 
 ```php
 $statement = $connection->prepare('INSERT INTO student (fullname) VALUES (:name)');
@@ -277,58 +264,6 @@ for ($i = 0; $i < 10; $i++) {
 #### Exemples concrets
 
 Un exemple d'une requête préparée, insérant un tableau de données dans une table `contact`
-
-```php
-$sql = "INSERT INTO contact (subject, message, email) VALUES (:subject, :message, :email)";
-
-$pdoStatement = $connection->prepare($sql);
-
-$contacts = [
-    [
-        'subject' => 'Test',
-        'message' => 'Un message de test super long !',
-        'email'   => 'test@test.com',
-    ],
-    [
-        'subject' => 'Test2',
-        'message' => 'Un message de test2 super long !',
-        'email'   => 'test2@test.com',
-    ],
-    [
-        'subject' => 'Test3',
-        'message' => 'Un message de test3 super long !',
-        'email'   => 'test3@test.com',
-    ],
-    [
-        'subject' => 'Test4',
-        'message' => 'Un message de test4 super long !',
-        'email'   => 'test4@test.com',
-    ],
-    [
-        'subject' => 'Test5',
-        'message' => 'Un message de test5 super long !',
-        'email'   => 'test5@test.com',
-    ],
-];
-
-$subject = '';
-$message = '';
-$email = '';
-$pdoStatement->bindParam(':subject', $subject);
-$pdoStatement->bindParam(':message', $message);
-$pdoStatement->bindParam(':email', $email);
-
-foreach ($contacts as $contact) {
-    $subject = $contact['subject'];
-    $message = $contact['message'];
-    $email = $contact['email'];
-
-    $count = $pdoStatement->execute();
-    var_dump($count);
-}
-```
-
-La même chose, avec `bindValue()` :
 
 ```php
 $sql = "INSERT INTO contact (subject, message, email) VALUES (:subject, :message, :email)";

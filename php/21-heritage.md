@@ -11,28 +11,25 @@ On parle d'héritage quand une classe hérite d'une autre. C'est-à-dire qu'elle
 Prenons le schéma suivant et voyons son implémentation en PHP :
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme': 'dark'}}%%
 classDiagram
-  class Beanie {
-    -propriete: string 
-    +getPropriete()
-    +setPropriete(propriete)
-  }
-  
-  class EarflapBeanie {
-    -unePropriete: string
-    +uneMethodeEnPlus()
-  }
-  Beanie <|-- EarflapBeanie
-  
-  class SkullCap {
-    -uneAutreProp: string
-  }
-  Beanie <|-- SkullCap
-end
+    class Beanie {
+        -propriete: string
+        +getPropriete()
+        +setPropriete(propriete)
+    }
+
+    class EarflapBeanie {
+        -unePropriete: string
+        +uneMethodeEnPlus()
+    }
+    Beanie <|-- EarflapBeanie
+
+    class SkullCap {
+        -uneAutreProp: string
+    }
+    Beanie <|-- SkullCap
 ```
-
-
 
 [Des types de bonnets sous-côtés](https://blog.delusionmfg.com/12-types-of-beanies-you-have-to-check-out)
 
@@ -95,6 +92,7 @@ class EarflapBeanie extends Beanie
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/33d964336c744c62a63b5d30bec3a3e7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 Il arrive qu'on ait besoin de récupérer le nom complet de notre classe (avec son *namespace* complet), qu'on appelle aussi <abbr title="Fully Qualified Class Name">FQCN (Fully Qualified Class Name)</abbr>. Pour cela, nous avons 2 moyens :
+
 - la fonction `get_class()` qui retourne :
   - le nom complet de l'objet en cours, si utilisé dans une classe, sans paramètre (appel : `get_class()`)
   - le nom complet de l'objet passé en paramètre (appel : `get_class(new DateTime())` ou `get_class($foo)`)
