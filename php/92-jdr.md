@@ -221,12 +221,15 @@ Pour valider le rendu, voici ce qui est attendu par votre chef de projet, pour c
 
 - Création/manipulation d'au moins une classe/objet
 - Création de requêtes de <abbr title="Base de Données">BdD</abbr> (au moins une insertion, une mise à jour et une récupération de données) avec gestion des erreurs
-- Manipulation d'un formulaire complexe (filtre, création/modification d'un objet, etc. avec validation des données)
+- Manipulation d'un formulaire complexe (filtre, création/modification d'un objet, etc. avec validation et affichage des données)
 
 Bonus :
 - Respect des normes PSR (1, 12 et 4) pour tout le code
 - Chaque ticket fait l'objet d'une <abbr title="Pull Request">PR</abbr> relue et approuvée
 
-Éléments communs à fournir :
+Éléments communs à fournir (conseil : ajoutez-les dans le projet, dans un dossier `docs`, `resources` ou autre nom) :
 - Un schéma de base de données
 - un dump de la base de données finale
+- un fichier `README.md` affichant : 
+  - Le schéma de la BdD
+  - La démarche pour installer le projet (le chef de projet doit pouvoir le faire sans erreur)
