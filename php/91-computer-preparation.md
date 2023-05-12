@@ -241,18 +241,17 @@ Sur le détail du modèle ou la liste des modèles, un bouton doit être présen
 
 Pour valider le rendu, voici ce qui est attendu par votre chef de projet, pour chacun d'entre vous : 
 
-- Création/manipulation d'au moins une classe/objet
-- Création de requêtes de <abbr title="Base de Données">BdD</abbr> (au moins une insertion, une mise à jour et une récupération de données) avec gestion des erreurs
-- Manipulation d'un formulaire complexe (filtre, création/modification d'un objet, etc. avec validation et affichage des données)
+- Création/manipulation d'au moins une classe/objet.
+- Création de requêtes de <abbr title="Base de Données">BdD</abbr> (au moins une insertion, une mise à jour et une récupération de données) avec gestion des erreurs.
+- Manipulation d'un formulaire complexe (filtre, création/modification d'un objet, etc. avec validation et affichage des données et requête(s) associées).
+- Travail d'équipe (lecture des <abbr title="Pull Requests">PRs</abbr> et remontée des problèmes, création de <abbr title="Pull Request">PR</abbr>, utilisation de `git rebase` pour simplifier l'historique et gérer les conflits, etc.).
 
 Bonus :
-- Respect des normes PSR (1, 12 et 4) pour tout le code
-- Chaque ticket fait l'objet d'une <abbr title="Pull Request">PR</abbr> relue et approuvée
+- Respect des [normes PSR (1, 12 et 4)](10-doc.md) pour tout le code.
 
 Éléments communs à fournir (conseil : ajoutez-les dans le projet, dans un dossier `docs`, `resources` ou autre nom) :
-- Un schéma de base de données
-- un dump de la base de données finale
+- Un schéma de base de données (fichier Looping, schéma image ou autre).
+- un dump de la base de données finale.
 - un fichier `README.md` affichant : 
-  - Le schéma de la BdD
-  - La démarche pour installer le projet (le chef de projet doit pouvoir le faire sans erreur)
-
+  - Le schéma de la BdD.
+  - La démarche pour installer le projet (le chef de projet doit pouvoir le faire sans erreurs).
