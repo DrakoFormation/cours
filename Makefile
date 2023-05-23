@@ -24,13 +24,13 @@ build: ## Construit les fichiers finaux (prod)
 	npm run build
 
 start:
-	docker-compose up -d
+	docker compose up -d
 
 stop:
-	docker-compose down
+	docker compose down
 
 destroy:
-	docker-compose down -v
+	docker compose down -v
 
 deploy: ## Déploie sur le serveur de prod
 	ansible-playbook -i ansible/prod ansible/deploy/deploy.yml

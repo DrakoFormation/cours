@@ -23,7 +23,7 @@ Pour créer un système REST, il y a **6 grands principes** à respecter, défin
 
 ### Client-serveur
 
-Un ou des clients cont **consommer** les données. Le système REST est un serveur (et peut en cacher plusieurs autres) pour **stocker** les données et **traiter** les requêtes.
+Un ou des clients vont **consommer** les données. Le système REST est un serveur (et peut en cacher plusieurs autres) pour **stocker** les données et **traiter** les requêtes.
 
 ### Sans état
 
