@@ -42,12 +42,9 @@ Voir également la [vidéo dédiée à la configuration de PHPStorm](https://www
 
 Pour installer un plugin dans VSCode, aller dans le menu de gauche, partie Extensions (avec 4 petits carrés). Pour chacun de ces plugins, je vous conseille d'en regarder la doc et de suivre son processus d'installation.
 
-- DotENV pour mettre de la couleurs dans les fichiers d'environnement (`.env`)
-- MySQL (de cweijan) pour faire le lien avec votre base de données ([je vous ai fait une vidéo d'installation et de configuration](https://www.loom.com/share/09f79db6bd6b4226972ac1017d048257))
-- php cs fixer (de junstyle)
-- PHP Debug (de XDebug)
-- PHP Getters & Setters (de phproberto)
-- PHP Intelephense (de Ben Mewburn)
+- DotENV pour mettre de la couleur dans les fichiers d'environnement (`.env`)
+- MySQL (de Weijan Chen) pour faire le lien avec votre base de données ([je vous ai fait une vidéo d'installation et de configuration](https://www.loom.com/share/09f79db6bd6b4226972ac1017d048257))
+- PHP (de DevSense)
 - Symfony for VSCode (de TheNouillet)
 - Twig Language 2 (de mblode)
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) (de Don Jayamanne)
