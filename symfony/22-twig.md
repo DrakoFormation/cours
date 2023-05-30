@@ -235,3 +235,29 @@ Notez que ce rangement nous permet de [surcharger/modifier les templates de n'im
 Dans les vues Twig, vous disposez d'une fonction `dump()` qui vous permet d'afficher le contenu d'une variable et d'en voir le détail (un peu comme un `var_dump`, mais plus complet et mieux mis en forme). Utilisée sans paramètre, la fonction `dump()` affiche toutes es variables disponibles dans la vue.
 
 Il existe également une commande pour vérifier la validité de vos vues Twig
+
+## Exercice
+
+Maintenant, il est temps de passer à l'affichage ! Même si nous n'allons pas utiliser des données réelles, nous allons préparer l'affichage général de nos vues.
+
+Toutes ces vues vont étendre `base.html.twig`.
+
+- Modifier `base.html.twig` pour :
+  - inclure Bootstrap (css et js)
+  - Créer une navbar avec des liens vers
+    - La page d'accueil
+    - La liste des articles
+- Pour la page de liste des articles :
+  - Créer un fichier pour créer un faux extrait d'article avec :
+    - Un titre
+    - Un nom d'utilisateur
+    - Un texte (Lorem Ipsum par exemple)
+    - Une date (date du jour, au format français)
+    - Un lien vers l'article (avec un id arbitraire, comme `12`)
+  - Inclure ce fichier en 5 exemplaires
+- Pour la page d'un article :
+  - Créer un contenu, comme précédemment, mais avec un texte plus long et sans le lien. Est-il nécessaire de créer un nouveau fichier pour ça ? Peut-on utiliser le fichier créé auparavant ?
+- Pour la page d'accueil :
+  - Ajouter des liens vers des articles, dont les identifiants vont de 32 à 64
+
+Nous allons ignorer les pages de création et modification des articles pour le moment.

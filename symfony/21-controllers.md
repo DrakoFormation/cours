@@ -112,3 +112,24 @@ Avec Symfony, vous pouvez dé-buguer vos programmes de plusieurs manières :
 
 Ces fonctions `dump()` et `dd()` sont disponibles dans n'importe quel fichier PHP de votre projet.
 La fonction `dump` ne va pas interrompre l'affichage ni le modifier, mais afficher un dump des variables demandées dans le `Profiler` de Symfony (la barre grise en bas de l'écran, quand vous chargez une page)
+
+## Exercices
+
+Dans un premier temps, nous allons définir nos différents contrôleurs et les routes associées. 
+Même si ça n'est pas une manière de fonctionner optimale dans un projet, nous allons ainsi pouvoir pratiquer les contrôleurs et les routes.
+
+Voici une liste des pages que nous allons créer :
+- Une page d'accueil
+  - chemin `/`
+- Une page listant les articles
+  - chemin `/articles`
+- Une page pour afficher un article
+  - chemin `/articles/identifiantDeLarticle` où `identifiantDeLarticle` doit être un nombre
+  - dans le corps de l'action : 
+    - Si `identifiantDeLarticle` est supérieur à `42`, rediriger vers la liste des articles
+- Une page pour créer un article
+  - chemin `/articles/nouveau`
+- Une page pour modifier un article
+  - chemin `/articles/identifiantDeLarticle/modifier` où `identifiantDeLarticle` doit être un nombre
+  - dans le corps de l'action : 
+    - Si `identifiantDeLarticle` est inférieur ou égale à `0`, rediriger vers la création d'un article

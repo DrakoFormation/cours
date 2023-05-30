@@ -146,3 +146,13 @@ Pour éviter de retenir des chemins complexes, nous pouvons préciser des script
 Ajouter les 2 lignes `fix` et `analyse` dans vos scripts, permet de définir des raccourcis pour lancer Php CS Fixer et PHPStan, sans avoir à se rappeler le détail des commandes ;) .
 
 Ces commandes peuvent être lancées avec `composer fix` et `composer analyse`
+
+## Exercices
+
+Nous allons pratiquer à l'aide d'un petit projet : un blog. Nous allons le construire étape par étape, à chaque section du cours.
+
+Dans un premier temps, il nous faut : 
+- initialiser un nouveau projet Symfony
+- ajouter `php-cs-fixer` et `phpstan` dans les dépendances de **dev** du projet
+  - Les configurer
+- les ajouter aux scripts de composer
