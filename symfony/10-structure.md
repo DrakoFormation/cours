@@ -129,16 +129,16 @@ Si vous avez besoin d'installer une nouvelle dépendance, il faudra utiliser `co
 ```mermaid
 %%{init: {'theme':'dark'}}%%
 sequenceDiagram
-    Utilisateur->>FrontController: Je veux la page /test
-    FrontController->>Routeur: Qui fait le traitement ?
-    Routeur->>FrontController: Demande au contrôleur X
-    FrontController->>Contrôleur: Donne moi une réponse
-    Contrôleur-->>Modèle: Donne moi les données
-    Modèle-->>Contrôleur: Les voilà
-    Contrôleur->>Vue: Crée moi un affichage
-    Vue->>Contrôleur: Le voilà
-    Contrôleur->>FrontController: Voilà la réponse
-    FrontController-)Utilisateur: Et voilà !
+    Utilisateur ->> FrontController: Je veux la page /test
+    FrontController ->> Routeur: Qui fait le traitement ?
+    Routeur ->> FrontController: Demande au contrôleur X
+    FrontController ->> Contrôleur: Donne moi une réponse
+    Contrôleur -->> Modèle: Donne moi les données
+    Modèle -->> Contrôleur: Les voilà
+    Contrôleur ->> Vue: Crée moi un affichage
+    Vue ->> Contrôleur: Le voilà
+    Contrôleur ->> FrontController: Voilà la réponse
+    FrontController -) Utilisateur: Et voilà !
 ```
 
 Le traitement d'une requête avec Symfony se fait en 10 étapes (pour résumer ;) ) :
