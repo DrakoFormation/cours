@@ -45,3 +45,32 @@ Créer un environnement de travail en utilisant Docker
 ## [Intégration continue](ci/)
 
 Les grands principes et la mise en place de l'intégration continue, à l'aide de Gitlab.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bonjour tout le monde :) 
+
+Comment allez-vous ? 
+
+Je commence à écrire mon retour sur le groupe, même si je vais éditer ce message plusieurs fois pendant les modules PHP/Symfony/Déploiement (je les ai jusqu'à début juillet).
+
+Un point important sur le groupe : à part quelques uns (Hicham en tête), c'est un groupe qui progresse vite, avance bien et ensemble. Au moment où j'écris ces lignes, ils en sont au neuvième jour d'un projet en groupes et s'en sortent plutôt bien (bien entendu, ils ont des problèmes en pagaille, mais rien d'insurmontable, ni d'étonnant dans la découverte de l'exercice du travail de groupe **et** de la découverte d'un langage).
+
+Mes remarques individuelles : 
+- Emilly est une bosseuse, ayant parfois du mal à prendre du recul sur certains problèmes (la tête dans le guidon, en somme), mais elle avance bien, progresse vite et s'assure de tout comprendre avant d'avancer.
+- Malak 

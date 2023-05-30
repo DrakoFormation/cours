@@ -5,7 +5,16 @@ Avant de pouvoir travailler concrètement sur Symfony, il faut mettre en place n
 Pour cela, nous allons installer :
 
 - [Composer, gestionnaire de paquet pour PHP](https://getcomposer.org/doc/00-intro.md) (ou [lien direct vers l'installeur](https://getcomposer.org/Composer-Setup.exe))
-- [l'outil en ligne de commande de Symfony](https://symfony.com/download) (ou [lien direct vers l'installeur](https://get.symfony.com/cli/setup.exe))
+- [Installer Scoop](https://scoop.sh/)
+  - Ouvrir Powershell et lancer les commandes
+```
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+```
+- [l'outil en ligne de commande de Symfony](https://symfony.com/download) (ou [lien direct vers l'installeur](https://get.symfony.com/cli/setup.exe)) ou avec Scoop :
+```
+scoop install symfony-cli
+```
 
 Si vous utilisez Windows, je vous conseille d'utiliser Powershell pour éviter des erreurs de rendu.
 
