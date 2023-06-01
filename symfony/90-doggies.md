@@ -168,11 +168,13 @@ Pour valider le rendu, voici ce qui est attendu par votre chef de projet, pour c
 - Création de vues Twig (avec utilisation d'héritage)
 - Mise en place d'au moins un formulaire
 - Création de services
+- Chaque <abbr title="Pull Request">PR</abbr> est reliée à un ticket (GitHub Project, Trello ou autre outil équivalent)
+- Chaque ticket fait l'objet d'une <abbr title="Pull Request">PR</abbr> relue et approuvée
 
 Bonus :
-- Respect des normes PSR (1, 12 et 4) pour tout le code
-- Chaque ticket fait l'objet d'une <abbr title="Pull Request">PR</abbr> relue et approuvée
+- Respect des normes PSR et des conventions définies par le groupe pour tout le code
 
 Éléments communs à fournir :
 - Un diagramme de classe / schéma de la BdD
 - Un plan du site (liste des pages et les liens entre elles)
+- Un document avec les normes de nommage et de rangement de vos fichiers
