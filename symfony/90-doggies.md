@@ -174,4 +174,5 @@ Bonus :
 - Chaque ticket fait l'objet d'une <abbr title="Pull Request">PR</abbr> relue et approuvée
 
 Éléments communs à fournir :
-- Un schéma de base de données
+- Un diagramme de classe / schéma de la BdD
+- Un plan du site (liste des pages et les liens entre elles)

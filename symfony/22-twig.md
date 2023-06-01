@@ -247,14 +247,14 @@ Toutes ces vues vont étendre `base.html.twig`.
   - Créer une navbar avec des liens vers
     - La page d'accueil
     - La liste des articles
-- Pour la page de liste des articles :
-  - Créer un fichier pour créer un faux extrait d'article avec :
+- Pour la page de liste des articles, nous allons créer une liste d'articles fictifs, identiques :
+  - Créer un fichier `_article.html.twig` que l'on va inclure dans la liste, qui affichera :
     - Un titre
     - Un nom d'utilisateur
     - Un texte (Lorem Ipsum par exemple)
     - Une date (date du jour, au format français)
     - Un lien vers l'article (avec un id arbitraire, comme `12`)
-  - Inclure ce fichier en 5 exemplaires
+  - Inclure ce fichier en 5 exemplaires, grâce à une boucle `for`
 - Pour la page d'un article :
   - Créer un contenu, comme précédemment, mais avec un texte plus long et sans le lien. Est-il nécessaire de créer un nouveau fichier pour ça ? Peut-on utiliser le fichier créé auparavant ?
 - Pour la page d'accueil :

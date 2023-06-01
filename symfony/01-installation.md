@@ -156,3 +156,33 @@ Dans un premier temps, il nous faut :
 - ajouter `php-cs-fixer` et `phpstan` dans les dépendances de **dev** du projet
   - Les configurer
 - les ajouter aux scripts de composer
+
+
+
+```mermaid
+classDiagram
+    Groupe <|-- G1
+    Groupe <|-- G2
+    Groupe <|-- G3
+    Groupe <|-- G4
+    
+    G1 *-- TiHue
+    G1 *-- Sami
+    G1 *-- David
+    G1 *-- Peter
+    
+    G2 *-- Jérôme
+    G2 *-- Adel
+    G2 *-- Winai
+    G2 *-- Hicham
+    
+    G3 *-- Joanna
+    G3 *-- Arthur
+    G3 *-- Mathias
+    G3 *-- Antoine
+    
+    G4 *-- Emilly
+    G4 *-- Malak
+    G4 *-- Ernaud
+    G4 *-- Hichem
+```
