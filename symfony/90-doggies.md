@@ -163,7 +163,7 @@ Pour cela, veuillez remplir le fichier `README.md` et créer une liste des amél
 
 Pour valider le rendu, voici ce qui est attendu par votre chef de projet, pour chacun d'entre vous : 
 
-- Création/manipulation d'au moins une entité (affichage, création, modification, suppression)
+- Création/manipulation d'au moins une entité (CRUD, requête *via* un repository, etc.)
 - Création de routes et de controllers
 - Création de vues Twig (avec utilisation d'héritage)
 - Mise en place d'au moins un formulaire
