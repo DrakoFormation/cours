@@ -5,6 +5,7 @@
 ## Pour résumer
 
 - Twig est un moteur de template, il permet d'écrire du HTML plus confortablement, avec de nombreux outils dans nos fichiers `.twig`
+  - l'héritage de templates (un template peut hériter d'un autre, et modifier des `block`)
   - les tags `{% %}` pour des calculs (dont `{% extends 'nomDUneAutreVue.twig' %}`)
   - les moustaches `{{}}` pour afficher des éléments
   - les filtres `|unFiltre()`
@@ -22,75 +23,196 @@ Twig est un moteur de rendu (avec Symfony, vous pouvez tout aussi bien continuer
 ## Syntaxe
 
 Twig a sa propre syntaxe, basée sur 5 éléments :
-- les tags `{% unExempleDeTag %}{% endunExempleDeTag %}` qui vont vous permettre de faire des calculs divers
+- les tags `{% unExempleDeTag %}{% endunExempleDeTag %}` qui vont vous permettre de faire divers calculs
 - les moustaches (appellation non-officielle) `{{}}` qui sont là pour afficher du contenu (le contenu d'une variable, le retour d'une fonction ou d'un filtre, etc.)
 - les filtres `uneValeurOuVariable | unFiltre(unParamètreDuFiltre)` sont des fonctions dont le premier paramètre se trouve avant le `|` et les suivants dans les parenthèses
 - les fonctions `uneFonction(unParamètreDeLaFonction, unSecondParamètre)` plus classiques
 - les tests `if uneValeur is unTest(unParamètreDuTest)` vont servir dans des conditions (ainsi que les divers opérateurs, que je vous invite à aller voir par vous-même dans la documentation)
 
-Voyons quelques exemples avec la page d'accueil d'un blog.
+## Les tags
 
-Un premier fichier `templates/base.html.twig` :
+Les tags servent à faire des calculs dans nos vues. On peut les voir comme un équivalent de la balise `<?php ?>` en PHP classique.
+
+
+### Conditions
+
+La [documentation pour le tag if](https://twig.symfony.com/doc/3.x/tags/if.html)
+
+Un exemple de condition : 
+
+```twig
+{% if condition %}
+    <p>Du contenu</p>
+{% elseif autreCondition %}
+    <p>Un contenu alternatif</p>
+{% else %}
+    <p>Un autre contenu</p>
+{% endif %}
+```
+
+Pour écrire les conditions, vous pouvez utiliser les opérations suivantes :
+
+- [Les opérateurs classiques](https://twig.symfony.com/doc/3.x/templates.html#comparisons) `==`, `!=`, `<`, `>`, `>=`, `<=` pour comparer des éléments, 
+- mais aussi `starts with`, `ends with`, `has some`, `has every`, `matches`
+
+```twig
+{% if 'Rémi' starts with 'R' %} 
+```
+
+```twig
+{% if 'Rémi' end with 'i' %} 
+```
+
+```twig
+{% if phone matches '/^[\\d\\.]+$/' %}
+```
+
+```twig
+{% set sizes = [34, 36, 38, 40, 42] %}
+
+{% if sizes has every v => v > 38 %}
+{# false #}
+
+{% if sizes has some v => v > 38 %}
+{# true #}
+```
+
+- `in` pour vérifier si un élément est dans un tableau `{% if 1 in [1, 2, 3] %}`
+- `is` en conjonction avec d'autres tests (`empty`, `defined`, etc.) : 
+```twig
+ {% if sizes is empty %}
+```
+
+```twig
+ {% if sizes is defined %}
+```
+- `same as` est équivalent au `===` de PHP
+```twig
+ {% if test is same as(false) %}
+```
+
+
+### Boucles
+
+La [documentation du tag for](https://twig.symfony.com/doc/3.x/tags/for.html)
+
+Avec Twig, il n'existe qu'un type de boucle : `for`.
+
+```twig
+<ul>
+    {% for i in [1, 2, 3, 4] %}
+        <li>{{ i }}</li>
+    {% endfor %}
+</ul>
+```
+
+Pour récupérer les clés et les valeurs du tableau :
+
+```twig
+<ul>
+    {% for key, i in [1, 2, 3, 4] %}
+        <li>{{ key }} : {{ i }}</li>
+    {% endfor %}
+</ul>
+```
+
+#### La variable `loop`
+
+Dans les boucles, une variable `loop` est définie (et uniquement dans la boucle) et contient un ensemble d'informations : 
+- `loop.index` l'itération en cours de la boucle (commençant par 1)
+- `loop.index0` l'itération en cours de la boucle (commençant par 0)
+- `loop.revindex` le nombre d'itérations depuis la fin de la boucle (commençant par 1)
+- `loop.revindex0` le nombre d'itérations depuis la fin de la boucle (commençant par 0)
+- `loop.first` true si c'est la première itération
+- `loop.last` true si c'est la dernière itération
+- `loop.length` le nombre d'itérations dans la boucle
+- `loop.parent` le contexte parent
+
+### `extends` et `block`
+
+La [documentation de extends](https://twig.symfony.com/doc/3.x/tags/extends.html)
+
+Ces deux tags permettent de créer un héritage entre deux vues/templates. Il convient alors de voir nos fichiers `twig` comme des objets, avec une vue parente et des enfants potentiels. Les blocs sont ainsi équivalent aux propriétés que l'on peut surcharger dans les enfants.
+
+
+Cela permet d'avoir, dans un premier fichier :
+- Une structure HTML complète (avec le doctype, `<html>`, `<head>`, `<body>`, etc.)
+- Des `block`, permettant de créer des emplacements qui pourront être modifiés (surchargés) par les vues enfants.
+
+Un exemple `templates/base.html.twig` :
 
 ```Twig
-{# Ceci est un commentaire dans Twig #}
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <body>
         {# Ici, nous définissons un ensemble de blocs, qui seront modifiables dans les templates qui héritent de templates/base.html.twig #}
-        {% block bodyHeader %}{% endblock %}
-        {% block body %}{% endblock body %}
-        {% block bodyFooter %}{% endblock %}
+        {% block bodyHeader %}
+            Une valeur par défaut de bodyHeader
+        {% endblock %}
+        
+        {% block body %}{% endblock %}
+        
+        {% block bodyFooter %}
+            Une valeur par défaut de bodyFooter
+        {% endblock %}
         
         {% block javascripts %}{% endblock %}
     </body>
 </html>
 ```
 
-Un second fichier `templates/blog/layout.html.twig` :
+Dans un second fichier :
+- Une extension de notre vue de base, pour **récupérer toute la structure HTML**, grâce au tag `extends`
+- Un appel des différents blocs que l'on **souhaite modifier**
 
-```Twig
-{# On étend base.html.twig, on en récupère donc tout le contenu, mais nous ne pouvons plus écrire des choses en dehors de blocks #}
-{% extends 'base.html.twig' %}
-
-{% block body %}
-
-    {# Ici, nous partons du principe que nous avons une variable articles (un tableau contenant des objets Article, par exemple) #}
-    <h1>
-        {# on utilise le filtre |length qui nous renvoie la quantité d'élements dans le tableau #}
-        {{ articles|length }}
-        articles sur ce blog
-    </h1>
-    
-    {# la syntaxe du for est encore différente du PHP, mais permet aussi beaucoup plus de souplesse (voir la doc pour les différentes utilisations possibles) #}
-    {% for article in articles %}
-        {# on utilise une condition et un test ici, pour vérifier que notre article n'est pas vide #}
-        {% if article is not empty %}
-        
-            {# On inclue un autre template en lui transmettant des paramètres #}
-            {# Ici, on lui dit qu'il n'aura que les paramètres globaux (app) et la variable article #}
-            {% include 'blog/_article.html.twig' with { article: article } only %}
-
-        {# Notez ici que les tags ont souvent un début et une fin, mais que l'on utilise plus d'accolades #}
-        {% endif %} 
-    {% endfor %}
-    
-{# Il n'est pas obligatoire d'indiquer le nom du block qu'on ferme, c'est simplement plus pratique pour s'y retrouver si le block contient beaucoup de choses #}
-{% endblock body %}
-```
-
-Si, pour une raison ou une autre, vous voulez conserver le contenu du bloc parent, vous pouvez appeler la fonction `parent()`.
+Un exemple, `templates/test/test.html.twig` :
 
 ```twig
-{# On étend base.html.twig, on en récupère donc tout le contenu, mais nous ne pouvons plus écrire des choses en dehors de blocks #}
 {% extends 'base.html.twig' %}
 
+{% block bodyFooter %}
+  Du contenu dans le block bodyFooter
+{% endblock bodyFooter %}
+
 {% block body %}
-  {{ parent() }}
-  
-  Je rajoute du contenu après le contenu de mon parent
+  Du contenu dans le block body
 {% endblock body %}
 ```
+
+:warning: Il est à noter que, dans ce second fichier, on ne surcharge pas le bloc `bodyHeader`. C'est donc le contenu présent dans `base.html.twig` qui sera affiché (car non surchargé).
+
+On peut représenter cet héritage avec ce schéma : 
+
+```mermaid
+classDiagram
+    base <|-- test
+    class base {
+        +bodyHeader
+        +body
+        +bodyFooter
+    }
+    class test {
+        +body
+        +bodyFooter
+    }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Spécifiques à Symfony
 
