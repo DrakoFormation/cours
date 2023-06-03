@@ -197,11 +197,54 @@ classDiagram
     }
 ```
 
+### include
+
+La [documentation du tag include](https://twig.symfony.com/doc/3.x/tags/include.html) 
+
+:warning: Il existe également une [fonction include](https://twig.symfony.com/doc/3.x/functions/include.html), qui est recommandée et qui a le même fonctionnement.
+
+Ce tag permet d'inclure un template dans un autre. Son fonctionnement est assez similaire au `include` ou au `require` de PHP. 
 
 
+Son utilisation de base (le fichier `test.html.twig` est à la racine du dossier templates) :
+
+```twig
+{% include 'test.html.twig' %}
+```
+
+Par défaut, include récupère les variables définies dans le template qui inclut. On peut changer ce comportement :
+
+```twig
+{% set uneVariable = 'truc' %}
+{% include 'test.html.twig' with { 'foo': 'bar' } %}
+```
+
+- Le mot-clé `with` indique à `include` qu'on va créer des variables qu'il devrait utiliser
+- `{ 'foo': 'bar' }` est un tableau associatif, dont la clé `foo` va être le nom d'une variable disponible dans le fichier inclut, et `'bar'` sa valeur.
+- Dans le cas, la variable `uneVariable` sera également disponible dans `test.html.twig`, car déclarée avant le `include`
+
+Pour aller plus loin, il est possible de ne transmettre **que les variables que l'on déclare** au template inclut, grâce au mot-clé `only` :
+
+```twig
+{% set uneVariable = 'truc' %}
+{% include 'test.html.twig' with { 'foo': 'bar' } only %}
+```
+
+- Le mot-clé `with` indique à `include` qu'on va créer des variables qu'il devrait utiliser
+- `{ 'foo': 'bar' }` est un tableau associatif, dont la clé `foo` va être le nom d'une variable disponible dans le fichier inclut, et `'bar'` sa valeur.
+- Le mot-clé `only` indique qu'il ne faut rien transmettre d'autre au template inclut (la variable `uneVariable`, définie avant le `include` ne sera donc pas présente dans `test.html.twig`)
 
 
+## Les filtres
 
+Les filtres sont des fonctions particulières, s'appliquant sur des chaines de caractères (mais aussi des objets ou des tableaux). On l'ajoute après la valeur que l'on souhaite transformer et il est séparé de ce dernier par une barre verticale `|`.
+
+Un exemple avec le filtre `capitalize` (qui met en majuscule le premier caractère de chaque mot) :
+
+```twig
+{{ 'mon premier filtre'|capitalize }}
+{# Affiche 'Mon Premier Filtre' #}
+```
 
 
 
