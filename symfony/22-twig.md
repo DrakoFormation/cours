@@ -29,6 +29,26 @@ Twig a sa propre syntaxe, basée sur 5 éléments :
 - les fonctions `uneFonction(unParamètreDeLaFonction, unSecondParamètre)` plus classiques
 - les tests `if uneValeur is unTest(unParamètreDuTest)` vont servir dans des conditions (ainsi que les divers opérateurs, que je vous invite à aller voir par vous-même dans la documentation)
 
+
+## Transmettre des paramètres
+
+Depuis un controller, vous pouvez transmettre un tableau de paramètres à la vue. 
+
+L'index dans ce tableau correspondra au nom de la variable dans le fichier Twig, la valeur à sa valeur.
+
+```php
+public function index(int $page = 1): Response 
+{
+    $listeDesArticles = [];
+    return $this->render('blog/index.html.twig', [
+        'page'     => $page,
+        // Ici, la vue Twig aura un paramètre articles,
+        // indépendant du nom de la variable dans le controller
+        'articles' => $listeDesArticles, 
+    ]);
+}
+```
+
 ## Les tags
 
 Les tags servent à faire des calculs dans nos vues. On peut les voir comme un équivalent de la balise `<?php ?>` en PHP classique.
@@ -246,88 +266,96 @@ Un exemple avec le filtre `capitalize` (qui met en majuscule le premier caractè
 {# Affiche 'Mon Premier Filtre' #}
 ```
 
+### `date`
+
+La [documentation de date](https://twig.symfony.com/doc/3.x/filters/date.html)
+
+Lorsque vous avez un objet `DateTime` à afficher, il faut donner un format d'affichage (sous peine d'avoir une erreur "object of type DateTime could not be converted to string"). Le filtre `date` permet entre autre de régler ce souci.
+
+```twig
+{# Depuis un objet #}
+{{ article.createdAt|date("d/m/Y") }}
+
+{# Depuis une chaine de caractères #}
+{{ 'now'|date("d/m/Y") }}
+```
+
+### `format_date`
+
+la [documentation de format_datetime](https://twig.symfony.com/doc/3.x/filters/format_datetime.html)
+
+Ce filtre (pourtant bien pratique) n'est pas fourni par défaut dans Symfony. Il nous faut installer quelques outils supplémentaires :
+
+`composer require twig/intl-extra`
+`composer require twig/extra-bundle`
 
 
+Il existe également les variantes 
+- [format_date](https://twig.symfony.com/doc/3.x/filters/format_date.html)
+- [format_time](https://twig.symfony.com/doc/3.x/filters/format_time.html)
 
+Ce filtre permet de formater l'affichage d'une date (depuis un objet DateTime ou une chaine de caractères) en fonction d'une langue et d'utiliser des formats standards.
 
+```twig
+{{ '2019-08-07 23:39:12'|format_datetime('full', 'full', locale='fr') }}
 
+{# Affiche : mercredi 7 août 2019 23:39:12 UTC #}
+```
 
+### `length`
 
+La [documentation de length](https://twig.symfony.com/doc/3.x/filters/length.html)
 
+Ce filtre permet de récupérer la longueur d'une chaine de caractères, le nombre d'éléments dans un tableau.
 
+```twig
+{{ 'Une chaine de caractères'|length }}
+{# Affiche : 24 #}
 
+{% if [1, 2, 3]|length > 2 %}
+```
 
-## Spécifiques à Symfony
+## Les fonctions
 
-Il y a quelques filtres et fonctions utiles à connaître pour travailler avec Twig dans Symfony : 
+### `asset()`
 
-`asset()` qui permet de récupérer un fichier (css, image, javascript, etc.) dans le dossier `public` ou l'un de ses sous-dossiers
+`asset()` permet de récupérer un fichier (css, image, javascript, etc.) dans le dossier `public` ou l'un de ses sous-dossiers
 ```twig
 {# Ici, on charge l'image qui se trouve dans le dossier public/chemin/vers/une/image.jpg. L'avantage est que nous n'avons plus à gérer le dossier dans lequel nous nous trouvons, Symfony le fait pour nous #}
 {{ asset('/chemin/vers/une/image.jpg') }}
 ```
 
-`path()` qui permet d'avoir l'URi vers une de vos routes
+### `path()`
+
+`path()` permet d'avoir l'URi vers une de vos routes
 ```twig
 {{ path('blog_show', { slug: article.slug }) }}
 ```
 
-`url()` qui permet d'avoir une url (complète, avec le http(s), le nom de domaine, etc.)
+### `url()`
+
+`url()` permet d'avoir une url (complète, avec le http(s), le nom de domaine, etc.)
 ```twig
 {# path prend en premier paramètre le nom d'une route, et en second un "objet" avec les paramètres de la route #}
 {{ url('blog_show', { slug: article.slug }) }}
 ```
 
-`trans` (filtre ou tag, les deux existent) qui va nous permettre d'appeler nos traductions
+### `is_granted()`
+
+[`is_granted()` permet de vérifier si l'utilisateur connecté a des droits](https://symfony.com/doc/current/security.html#security-template).
+
 ```twig
-{# le filtre trans s'applique sur une chaine de caractère (qui peut venir d'une variable), et prend 2 paramètres #}
-{# Le premier est une liste de paramètres nécessaires à la traduction (que nous verrons dans une partie sur les traductions) #}
-{# Le second est le nom du fichier où se trouve la traduction (ici, blog.fr.yaml si l'on est en français) #}
-{{ "Lire l'article"|trans({}, 'blog') }}
+{# Si l'utilisateur connecté a le rôle d'administrateur, on affiche un bouton de suppression #}
+{% if is_granted('ROLE_ADMIN') %}
+    <a href="...">Delete</a>
+{% endif %}
 ```
 
-Poursuivons notre exemple avec le fichier `blog/_article.html.twig` :
+### `include()` (fonction)
 
-```Twig
-<article>
-    <header>
-        <h2>
-            {# Pour récupérer une propriété d'un objet, on utilise généralement cette notation : nomDeLaVariable.nomDeSaPropriete #}
-            {# Dans les faits, c'est la méthode getTitle() de notre objet Article qui va être appelée, il faut donc qu'elle soit définie. #}
-            {{ article.title }}{# on aurait aussi pu écrire article.getTitle() pour bien montrer l'appel au getter #}
-        </h2>
-        {# Ici, on charge l'image qui se trouve dans le dossier public/chemin/vers/une/image.jpg. L'avantage est que nous n'avons plus à gérer le dossier dans lequel nous nous trouvons, Symfony le fait pour nous #}
-        <img src="{{ asset('/chemin/vers/une/image.jpg') }}" alt="">
-    </header>
-    {# path nous permet d'avoir le lien (relatif) vers notre article. On utilise généralement le lien relatif car il est plus court à calculer et éviter beaucoup de calculs au navigateur. #}
-    {# path prend en premier paramètre le nom d'une route, et en second un "objet" avec les paramètres de la route #}
-    <a href="{{ path('blog_show', { slug: article.slug }) }}">
-        {# le filtre trans s'applique sur une chaine de caractère (qui peut venir d'une variable), et prend 2 paramètres #}
-        {# Le premier est une liste de paramètres nécessaires à la traduction (que nous verrons dans une partie sur les traductions) #}
-        {# Le second est le nom du fichier où se trouve la traduction (ici, blog.fr.yaml si l'on est en français) #}
-        {{ "Lire l'article"|trans({}, 'blog') }}
-    </a>
-    {# url prend les mêmes paramètres que path, mais retourne une url absolue #}
-    Lien partageable vers l'article : {{ url('blog_show', { slug: article.slug }) }}
-</article>
-```
+La [documentation de la fonction include](https://twig.symfony.com/doc/3.x/functions/include.html).
 
-## Transmettre des paramètres
-
-Depuis un controller (qui va *rendre* la vue, en utilisant la méthode `render()` disponible dans le `AbstractController` de Symfony), vous pouvez transmettre un tableau de paramètres à la vue. L'index dans ce tableau correspondra au nom de la variable dans le fichier Twig, la valeur à sa valeur.
-
-```php
-public function index(int $page = 1): Response 
-{
-    $listeDesArticles = [];
-    return $this->render('blog/index.html.twig', [
-        'page'     => $page,
-        // Ici, la vue Twig aura un paramètre articles,
-        // indépendant du nom de la variable dans le controller
-        'articles' => $listeDesArticles, 
-    ]);
-}
-```
+Il s'agit d'une autre manière d'écrire les includes, sous forme de fonction, plutôt que de tag. Cette approche est recommandée par Symfony, car plus souple.
 
 ## Factoriser le code avec des macros
 

@@ -28,17 +28,17 @@ Tout d'abord, installer le bundle nécessaire (il est inclus par défaut, sur le
 composer require symfony/security-bundle
 ```
 
-Il faut alors créer une entité pour gérer nos utilisateurs (la plupart du temps, on l'appelle `User`, mais vous pouvez adapter le nom à votre besoin). On utilise la commande `make:user` pour générer cette entité particulière.
+Il faut alors créer une entité pour gérer les utilisateurs (la plupart du temps, on l'appelle `User`, mais vous pouvez adapter le nom à votre besoin). On utilise la commande `make:user` pour générer cette entité particulière.
 
 ```bash
 php bin/console make:user
 ```
 
-Dans la plupart des cas, nous voulez stocker notre entité `User` en base (c'est pour cela que je parle d'entité ;) ), mais sachez que ça n'est pas obligatoire. 
+Dans la plupart des cas, nous voulons stocker notre entité `User` en base (c'est pour cela que je parle d'entité ;) ), mais sachez que ça n'est pas obligatoire. 
 
 Il faut alors déterminer une propriété qui nous servira d'identifiant (une propriété dont la valeur sera unique et que nous afficherons à nos utilisateurs). En général, on crée une propriété `username` ou `email` pour cela.
 
-Et bien sûr, si nous stockons les informations en base, il faut demander à Symfony de hasher les mots de passe.
+Et bien sûr, si nous stockons les informations en base, il faut demander à Symfony de hacher (hasher en franglais) les mots de passe.
 
 La commande va nous ajouter / modifier plusieurs fichiers :
 - `src/Entity/User.php` notre entité User
@@ -168,8 +168,8 @@ abstract class User implements UserInterface, PasswordAuthenticatedUserInterface
 
 ```
 
-Je vous conseille ensuite des créer des fixtures (fausses données) pour entrer un ou plusieurs `User` dans votre base (utiliser la commande `make:fixtures` de [DoctrineFixturesBundle](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html)). Pour que les mots de passe soient encodés dans vos Fixtures, il faut bien penser à :
-- injecter le service `UserPasswordHasherInterface` et l'utiliser pour encoder le mot de passe.
+Je vous conseille ensuite de créer des fixtures (fausses données) pour entrer un ou plusieurs `User` dans votre base (utiliser la commande `make:fixtures` de [DoctrineFixturesBundle](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html)). Pour que les mots de passe soient encodés dans vos Fixtures, il faut bien penser à :
+- injecter le service `UserPasswordHasherInterface` et l'utiliser pour encoder le mot de passe
 - ou encoder vos mots de passe avec la commande `security:encode-password` de Symfony avant de les mettre dans vos `User`
 
 ## Configuration
@@ -334,7 +334,7 @@ class SecurityController extends AbstractController
 }
 ```
 
-Je vous conseille de personnaliser les chemins et les noms des routes, pour correspondre à *vos* conventions de nommage. Par exemple, je mettrais les chemins en français et renommerais les routes `security_login `et` security_logout`. Il faudra bien sûr modifier ces noms à plusieurs endroits (`login.html.twig` et `security.yaml`, notamment).
+Je vous conseille de personnaliser les chemins et les noms des routes, pour correspondre à *vos* conventions de nommage. Par exemple, je mettrai les chemins en français et renommerai les routes `security_login `et` security_logout`. Il faudra bien sûr modifier ces noms à plusieurs endroits (`login.html.twig` et `security.yaml`, notamment).
 
 Notez que le fichier `login.html.twig` contient un formulaire html et non un formulaire Symfony. C'est ici voulu et rien ne vous empêche d'en créer un, si ce n'est de faire extrêmement attention aux noms des champs. Il contient également une section à dé-commenter si vous souhaitez activer la fonctionnalité "Se souvenir de moi".
 
