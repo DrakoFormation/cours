@@ -357,6 +357,18 @@ La [documentation de la fonction include](https://twig.symfony.com/doc/3.x/funct
 
 Il s'agit d'une autre manière d'écrire les includes, sous forme de fonction, plutôt que de tag. Cette approche est recommandée par Symfony, car plus souple.
 
+```twig
+{# On inclut un template (qui se trouve à la racine du dossier templates) #}
+{{ include('template.html.twig') }}
+
+
+{# On donne un paramètre "foo" à notre template (qui contient la valeur "bar") #}
+{{ include('template.html.twig', { foo: 'bar' }) }}
+
+{# On s'assure que notre template ne reçoive que la variable foo (et les variables définies globalement) #}
+{{ include('template.html.twig', { foo: 'bar' }, with_context = false) }}
+```
+
 ## Factoriser le code avec des macros
 
 [Documentation sur les macros](https://twig.symfony.com/doc/3.x/tags/macro.html)
