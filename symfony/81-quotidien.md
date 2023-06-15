@@ -1,5 +1,24 @@
 # Symfony au quotidien
 
+## Que faire devant un bug ?
+
+```mermaid
+flowchart TD
+    A[Message d'erreur] --> B{Résout l'erreur ?}
+    B -->|Non| C["Contexte : <ul><li>Quelle route ?</li><li>Quel Controller ?</li><li>Quelles données ?</li><li>Quelles vues ?</li></ul>"]
+    C --> D{"Résout l'erreur ?"}
+    D -->|Oui| I
+    D --> |Non| E["Stack Trace : <ul><li>Quel fichier <b>à moi</b> ?</li><li>Quelle ligne ?</li>"]
+    E --> F{"Résout l'erreur ?"}
+    F --> |Oui| I
+    F --> |Non| G["Ajout d'un dd()/dump()/etc.<br/>à la première ligne<br/>ou une suivante"]
+    G --> H{"Résout l'erreur ?"}
+    H --> |Non| G
+    H --> |Oui| I
+    B -->|Oui| I[Fin]
+```
+
+
 ## Créer un nouveau projet
 
 Dans un terminal (Powershell par exemple, sous Windows), aller dans le dossier où vous voulez créer votre projet et lancer la commande :

@@ -19,6 +19,7 @@ La [documentation officielle](https://symfony.com/doc/current/security.html), qu
   - `$this->getUser()` dans un controller étendant `AbstractController`
   - `$this->security->getUser()` dans un service où le service `Security` a été injecté
   - `app.user` dans une vue Twig
+- `php bin/console make:registration-form` pour créer automatiquement un formulaire d'inscription
 
 ## Installation et préparation
 
@@ -560,6 +561,10 @@ class ExampleService
 ### Dans un template 
 
 `app.user` Retourne le User (ou null si pas connecté)
+
+## Inscription
+
+Pour créer un formulaire d'inscription, vous pouvez [créer un formulaire classique](25-formulaires.md) ou utiliser la commande : `php bin/console make:registration-form` (cette solution est recommandée, car plus simple ;) )
 
 ## Gérer les droits avec les Voters
 

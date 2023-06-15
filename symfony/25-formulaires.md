@@ -158,44 +158,43 @@ Pour les différents [types de champs disponibles et leurs options](https://symf
 Pour créer un formulaire à partir de notre `TagType` (qui est un plan de fabrication, ou formulaire type), Symfony et son `AbstractController` nous offre une méthode `createForm` :
 
 ```php
-    #[Route("/new", name: "tag_new")]
-    public function new(Request $request, EntityManagerInterface $em): Response
-    {
-        $tag = new Tag();
+#[Route("/new", name: "tag_new")]
+public function new(Request $request, TagRepository $tagRepository): Response
+{
+    $tag = new Tag();
 
-        // On crée le formulaire (objet de traitement)
-        // Premier paramètre : le formulaire type (FQCN)
-        // Deuxième paramètre : l'objet à manipuler (à synchroniser avec le formulaire)
-        // Troisième paramètre : des options du formulaire
-        $form = $this->createForm(TagType::class, $tag, [
-            'method' => 'POST',
-            'action' => $this->generateUrl('tag_new'),
-        ]);
+    // On crée le formulaire (objet de traitement)
+    // Premier paramètre : le formulaire type (FQCN)
+    // Deuxième paramètre : l'objet à manipuler (à synchroniser avec le formulaire)
+    // Troisième paramètre : des options du formulaire (optionnelles)
+    $form = $this->createForm(TagType::class, $tag, [
+        'method' => 'POST',
+        'action' => $this->generateUrl('tag_new'),
+    ]);
 
-        // On dit explicitement au formulaire de traiter ce que contient la requête (objet Request)
-        $form->handleRequest($request);
+    // On dit explicitement au formulaire de traiter ce que contient la requête (objet Request)
+    $form->handleRequest($request);
 
-        // On regarde si le formulaire a été soumis ET est valide
-        if ($form->isSubmitted() && $form->isValid()) {
-            // On enregistre
-            $em->persist($tag);
-            $em->flush();
-            
-            // On peut également afficher un message à l'utilisateur
-            // Les flashs sont affichés une fois, au chargement de la page suivante
-            // Et permettent donc d'afficher un message, malgré une redirection
-            $this->addFlash('success', 'Donnée insérée');
+    // On regarde si le formulaire a été soumis ET est valide
+    if ($form->isSubmitted() && $form->isValid()) {
+        // On enregistre
+        $tagRepository->save($tag, true);
+        
+        // On peut également afficher un message à l'utilisateur
+        // Les flashs sont affichés une fois, au chargement de la page suivante
+        // Et permettent donc d'afficher un message, malgré une redirection
+        $this->addFlash('success', 'Donnée insérée');
 
-            // Une fois que le formulaire est validé,
-            // on redirige pour éviter que l'utilisateur ne recharge la page
-            // et soumette la même information une seconde fois
-            return $this->redirectToRoute('tag_index');
-        }
-
-        return $this->render('tag/new.html.twig', [
-            'form' => $form->createView(), // On crée un objet FormView, qui sert à l'affichage de notre formulaire
-        ]);
+        // Une fois que le formulaire est validé,
+        // on redirige pour éviter que l'utilisateur ne recharge la page
+        // et soumette la même information une seconde fois
+        return $this->redirectToRoute('tag_index');
     }
+
+    return $this->render('tag/new.html.twig', [
+        'form' => $form->createView(), // On crée un objet FormView, qui sert à l'affichage de notre formulaire
+    ]);
+}
 ```
 
 Il y a plusieurs éléments à noter ici : 
@@ -209,32 +208,32 @@ Il y a plusieurs éléments à noter ici :
 Prenons un affichage assez classique : 
 
 ```Twig
-    {# On affiche la balise <form> #}
-    {{ form_start(form) }}
-        {# On affiche une "row" de notre formulaire, c'est à dire un bloc qui va contenir le label (balise label) et le widget (ici un champ input de type text) #}
-        {# On ajoute des attributs sur la div, sur le widget et sur le label #}
-        {{ form_row(form.name, {
-            row_attr: {
-                class: 'form-line',
-                "data-line": true
-            },
-            attr: {
-                class: 'form-widget',
-            },
-            label_attr: {
-                class: 'form-label',
-            },
-        }) }}
-        
-        {# On affiche une "row" de notre formulaire, c'est à dire un bloc qui va contenir le label (balise label) et le widget (ici un champ input de type text) #}
-        {{ form_row(form.computers) }}
+{# On affiche la balise <form> #}
+{{ form_start(form) }}
+    {# On affiche une "row" de notre formulaire, c'est à dire un bloc qui va contenir le label (balise label) et le widget (ici un champ input de type text) #}
+    {# On ajoute des attributs sur la div, sur le widget et sur le label #}
+    {{ form_row(form.name, {
+        row_attr: {
+            class: 'form-line',
+            "data-line": true
+        },
+        attr: {
+            class: 'form-widget',
+        },
+        label_attr: {
+            class: 'form-label',
+        },
+    }) }}
+    
+    {# On affiche une "row" de notre formulaire, c'est à dire un bloc qui va contenir le label (balise label) et le widget (ici un champ input de type text) #}
+    {{ form_row(form.computers) }}
 
-        {# On affiche les éventuels champs qui n'aurait pas été affichés jusqu'ici #}
-        {{ form_rest(form) }}
-        {# On ajoute un bouton de validation du formulaire, nous n'en avons pas mis dans notre objet TagType #}
-        <button type="submit" class="btn btn-primary">Valider</button>
-    {# On affiche la balise </form> et les éventuels champs qui n'aurait pas été affichés jusqu'ici #}
-    {{ form_end(form) }}
+    {# On affiche les éventuels champs qui n'aurait pas été affichés jusqu'ici #}
+    {{ form_rest(form) }}
+    {# On ajoute un bouton de validation du formulaire, nous n'en avons pas mis dans notre objet TagType #}
+    <button type="submit" class="btn btn-primary">Valider</button>
+{# On affiche la balise </form> et les éventuels champs qui n'aurait pas été affichés jusqu'ici #}
+{{ form_end(form) }}
 ```
 
 Plusieurs fonctions Twig (uniquement disponibles avec Symfony) peuvent nous servir pour afficher un formulaire ou ses éléments (dans les exemples, nous avons une variable form, qui contient un objet `FormView`) :
@@ -255,13 +254,13 @@ Pour utiliser directement Bootstrap 5, Symfony fournit un thème de formulaire p
 ```yaml
 twig:
     default_path: '%kernel.project_dir%/templates'
-    form_themes: ['bootstrap_5_horizontal_layout.html.twig'] # On dit à Symfony d'utiliser un thème déjà prêt, intégrant les classes de Boostrap (version 4)
+    form_themes: ['bootstrap_5_horizontal_layout.html.twig'] # On dit à Symfony d'utiliser un thème déjà prêt, intégrant les classes de Boostrap (version 5)
 ```
 
 Pour que notre thème fonctionne, il nous faut ajouter le css de Bootstrap dans notre fichier `base.html.twig` : 
 
 ```Twig
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 ```
 
 Il y a également d'autres thèmes disponibles, que vous pouvez voir dans le dossier `vendor/symfony/twig-bridge/Resources/views/Form/` de votre projet (par défaut, Symfony utilise le thème `form_div_layout.html.twig`).
