@@ -23,7 +23,7 @@ La [documentation officielle](https://symfony.com/doc/current/security.html), qu
 
 ## Installation et préparation
 
-Tout d'abord, installer le bundle nécessaire (il est inclus par défaut, sur les projets initialisés avec `--full`) :
+Tout d'abord, installer le bundle nécessaire (il est inclus par défaut, sur les projets initialisés avec `--webapp`) :
 
 ```bash
 composer require symfony/security-bundle

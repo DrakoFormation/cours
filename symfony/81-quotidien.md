@@ -24,7 +24,7 @@ flowchart TD
 Dans un terminal (Powershell par exemple, sous Windows), aller dans le dossier où vous voulez créer votre projet et lancer la commande :
 
 ```bash
-  symfony new --full my_project
+  symfony new --webapp my_project
 ```
 
 Remplacer `my_project` par le nom de votre projet. Vous aurez alors un dossier `my_project`, que vous pouvez ouvrir dans votre IDE.

@@ -31,7 +31,7 @@ La [documentation officielle sur le Routing](https://symfony.com/doc/current/rou
 
 Le but de ce routing : faire le lien entre une URL et une action de controller. Il nous permet également d'avoir des URLs très propres, comme `/lire/article/debuter-avec-symfony` plutôt que `index.php?article_id=42`.
 
-Nous allons utiliser les annotations pour définir nos routes directement dans nos controllers. Cela correspond à une [bonne pratique de Symfony](https://symfony.com/doc/current/best_practices.html). Avec une installation complète de Symfony (grâce à la commande `symfony new --full my_project`), nous pouvons utiliser directement les annotations pour définir
+Nous allons utiliser les annotations pour définir nos routes directement dans nos controllers. Cela correspond à une [bonne pratique de Symfony](https://symfony.com/doc/current/best_practices.html). Avec une installation complète de Symfony (grâce à la commande `symfony new --webapp my_project`), nous pouvons utiliser directement les annotations pour définir
 nos routes dans nos controllers. Sans cela, nous aurions dû ajouter le module d'annotations dans le projet `composer require doctrine/annotations`.
 
 Un exemple de déclaration de route (sous forme d'annotation) :

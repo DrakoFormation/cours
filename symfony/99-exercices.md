@@ -10,7 +10,7 @@ La correction de ces exercices est disponible sur un [repository Github dédié]
 
 ### Résolution
 
-- On crée notre projet (si ça n'est pas déjà fait), avec la commande `symfony new --full my_project`
+- On crée notre projet (si ça n'est pas déjà fait), avec la commande `symfony new --webapp my_project`
 - On l'ouvre avec notre IDE et on lance le serveur Symfony (`symfony serve` dans un terminal)
 - On crée notre controller (nous sommes dans un projet neuf, nous n'en avons pas), avec la commande `php bin/console make:controller`. Nommons-le `DefaultController`
 - Nous avons une nouvelle classe créée dans `src/Controller/DefaultController.php` et un nouveau template (une nouvelle vue) dans `template/default/index.html.twig`
