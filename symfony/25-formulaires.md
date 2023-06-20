@@ -499,7 +499,21 @@ Ainsi, si on valide le formulaire de création de tag avec une valeur invalide, 
 
 [Très bon article de Jérôme Gagneux (JoliCode) sur le sujet](https://jolicode.com/blog/comprendre-et-eviter-les-attaques-csrf-grace-a-symfony)
 
-## Cas particuliers
+## Transmettre des options
+
+[Doc](https://symfony.com/doc/current/forms.html#passing-options-to-forms)
+
+- Définir l'option (setDefault/setRequired/etc.)
+- Transmettre une valeur au formulaire (controller)
+- L'utiliser dans le FormType
+
+### OptionResolver
+
+- setDefault()
+- setRequired()
+- setAllowedTypes()
+
+## Types particuliers
 
 Pour les différents [types de champs disponibles et leurs options](https://symfony.com/doc/current/reference/forms/types.html), je vous invite à vous référer à [la documentation officielle](https://symfony.com/doc/current/reference/forms/types.html). 
 
@@ -507,7 +521,17 @@ Pour les différents [types de champs disponibles et leurs options](https://symf
 
 La [documentation de EntityType](https://symfony.com/doc/current/reference/forms/types/entity.html)
 
-### Les collections
+<iframe class="yt-video" src="https://www.youtube.com/embed/w7iTuUlHm6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### CollectionType
 
 La [documentation de CollectionType](https://symfony.com/doc/current/reference/forms/types/collection.html)
+
+[L'implémentation des collections avec du javascript dans la documentation dédiée](https://symfony.com/doc/current/form/form_collections.html)
+
+<iframe class="yt-video" src="https://www.youtube.com/embed/HXHk8TJfW8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Envoi de fichiers (VichUploaderBundle)
+
+Je vous conseille très fortement d'[utiliser VichUploaderBundle pour gérer l'envoi de fichiers](https://github.com/dustin10/VichUploaderBundle)
 

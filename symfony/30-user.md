@@ -543,7 +543,7 @@ class ExampleService
     public function __construct(Security $security)
     {
         // Il vaut mieux éviter d'appeler le User directement
-        // dans le constructeur d'un service
+        // dans le constructeur d'un service.
         // Il pourrait ne pas être correctement initialisé à ce moment-là
         $this->security = $security;
     }
