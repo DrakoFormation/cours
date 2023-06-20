@@ -46,7 +46,7 @@ Si vous utilisez PHPStorm, je vous recommande de **toujours** ajouter le dossier
 
 Après avoir ouvert un projet Symfony dans votre IDE, faites quelques étapes simples et vous êtes prêts à travailler.
 
-- Ouvrir un terminal (Sur PHPStorm : cliquer sur `terminal` en bas de la fenêtre, sur VSCode, dans le menu du haut, cliquer sur `Terminal` > `New Terminal`)
+- Ouvrir un terminal (Sur PHPStorm : cliquer sur `terminal` en bas de la fenêtre, sur VSCode, dans le menu du haut, cliquer sur `Terminal` > `New Terminal` ou "tirer" le terminal depuis le bas de l'écran)
 - Lancer la commande `symfony serve`
 
 Vous pouvez la laisser tourner en tâche de fond (et y revenir de temps en temps si vous avez des erreurs) et pour utiliser la ligne de commande, vous pouvez ouvrir un nouveau terminal (avec les deux IDE, il y a un bouton `+`).

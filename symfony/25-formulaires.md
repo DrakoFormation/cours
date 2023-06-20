@@ -531,6 +531,121 @@ La [documentation de CollectionType](https://symfony.com/doc/current/reference/f
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/HXHk8TJfW8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#### Formulaire d'exemple
+
+##### Champ dans le FormType
+
+Le champ `chapters` dans `src\Form\BookType.php` :
+```php
+->add('chapters', CollectionType::class, [
+    'entry_type'    => ChapterType::class,
+    'entry_options' => [
+        'label' => false,
+    ],
+    'label'         => 'Chapitres',
+    'allow_add'     => true,
+    'allow_delete'  => true,
+    'by_reference'  => false,
+])
+```
+
+##### Twig
+
+Mon fichier `templates/book/form.html.twig` :
+```twig
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Créer / modifier un livre
+{% endblock %}
+
+{% block body %}
+    <h1>{{ block('title') }}</h1>
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.publishedAt) }}
+        {{ form_row(form.authors) }}
+
+        <h2>{{ form_label(form.chapters) }}</h2>
+        <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="chapters">Ajouter un chapitre</button>
+        <ul
+            class="chapters"
+            data-index="{{ form.chapters|length > 0 ? form.chapters|last.vars.name + 1 : 0 }}"
+            data-prototype="{{ form_widget(form.chapters.vars.prototype)|e('html_attr') }}"
+            data-collection-holder
+        >
+            {% for chapterForm in form.chapters %}
+                <li data-collection-element>
+                    {{ form_widget(chapterForm) }}
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="chapters">Ajouter un chapitre</button>
+
+        <button type="submit" class="btn btn-primary">Valider</button>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/collection.js') }}"></script>
+{% endblock %}
+```
+
+##### JS
+
+Mon fichier `public/js/collection.js` :
+
+```javascript
+const addFormToCollection = (e) => {
+  const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+
+  const item = document.createElement('li');
+
+  item.innerHTML = collectionHolder
+    .dataset
+    .prototype
+    .replace(
+      /__name__/g,
+      collectionHolder.dataset.index
+    );
+
+  collectionHolder.appendChild(item);
+
+  collectionHolder.dataset.index++;
+
+  addChildFormDeleteLink(item);
+};
+
+const addChildFormDeleteLink = (item) => {
+    const removeFormButton = document.createElement('button');
+    removeFormButton.innerText = 'Supprimer';
+    removeFormButton.classList.add('btn');
+    removeFormButton.classList.add('btn-danger');
+
+    item.prepend(removeFormButton);
+
+    removeFormButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        // remove the li for the tag form
+        item.remove();
+    });
+}
+
+
+document
+  .querySelectorAll('.add_item_link')
+  .forEach(btn => {
+      btn.addEventListener("click", addFormToCollection)
+  });
+
+document
+    .querySelectorAll('[data-collection-element]')
+    .forEach((element) => {
+        addChildFormDeleteLink(element)
+    })
+```
+
 ### Envoi de fichiers (VichUploaderBundle)
 
 Je vous conseille très fortement d'[utiliser VichUploaderBundle pour gérer l'envoi de fichiers](https://github.com/dustin10/VichUploaderBundle)
