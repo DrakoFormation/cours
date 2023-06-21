@@ -646,6 +646,33 @@ document
     })
 ```
 
+##### Thème de formulaire
+
+Un exemple de thème `form/theme.html.twig` :
+
+```twig
+{% block collection_row %}
+    <h2>{{ label }}</h2>
+    <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="{{ id }}">
+        Ajouter
+    </button>
+    <ul
+        class="{{ id }}"
+        data-index="{{ form|length > 0 ? form|last.vars.name + 1 : 0 }}"
+        data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}"
+        data-collection-holder
+    >
+        {% for chapterForm in form %}
+            <li data-collection-element>
+                {{ form_widget(chapterForm) }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock collection_row %}
+```
+
+Pour [inclure le thème, vous avez plusieurs possibilités mentionnées dans le cours](25-formulaires.md#appliquer-les-themes).
+
 ### Envoi de fichiers (VichUploaderBundle)
 
 Je vous conseille très fortement d'[utiliser VichUploaderBundle pour gérer l'envoi de fichiers](https://github.com/dustin10/VichUploaderBundle)
