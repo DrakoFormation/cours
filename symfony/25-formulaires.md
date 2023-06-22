@@ -592,29 +592,60 @@ Mon fichier `templates/book/form.html.twig` :
 {% endblock %}
 ```
 
+##### Thème de formulaire
+
+Un exemple de thème `form/theme.html.twig` :
+
+```twig
+{% block collection_row %}
+    {% if label %}
+        <h2>{{ label }}</h2>
+    {% endif %}
+    <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="{{ id }}">
+        Ajouter
+    </button>
+    <ul
+        class="{{ id }}"
+        data-index="{{ form|length > 0 ? form|last.vars.name + 1 : 0 }}"
+        data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}"
+        data-collection-holder
+    >
+        {% for form in form %}
+            <li data-collection-element>
+                {{ form_widget(form) }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock collection_row %}
+```
+
+Pour [inclure le thème, vous avez plusieurs possibilités mentionnées dans le cours](25-formulaires.md#appliquer-les-themes).
+
 ##### JS
 
 Mon fichier `public/js/collection.js` :
 
 ```javascript
 const addFormToCollection = (e) => {
-  const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+    const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
 
-  const item = document.createElement('li');
+    const item = document.createElement('li');
 
-  item.innerHTML = collectionHolder
-    .dataset
-    .prototype
-    .replace(
-      /__name__/g,
-      collectionHolder.dataset.index
-    );
+    item.innerHTML = collectionHolder
+        .dataset
+        .prototype
+        .replace(
+            /__name__/g,
+            collectionHolder.dataset.index
+        );
 
-  collectionHolder.appendChild(item);
+    collectionHolder.appendChild(item);
 
-  collectionHolder.dataset.index++;
+    collectionHolder.dataset.index++;
 
-  addChildFormDeleteLink(item);
+    addChildFormDeleteLink(item);
+    
+    initEvents();
 };
 
 const addChildFormDeleteLink = (item) => {
@@ -633,45 +664,22 @@ const addChildFormDeleteLink = (item) => {
 }
 
 
-document
-  .querySelectorAll('.add_item_link')
-  .forEach(btn => {
-      btn.addEventListener("click", addFormToCollection)
-  });
+const initEvents = function () {
+    document
+        .querySelectorAll('.add_item_link')
+        .forEach(btn => {
+            btn.addEventListener("click", addFormToCollection)
+        });
 
-document
-    .querySelectorAll('[data-collection-element]')
-    .forEach((element) => {
-        addChildFormDeleteLink(element)
-    })
+    document
+        .querySelectorAll('[data-collection-element]')
+        .forEach((element) => {
+            addChildFormDeleteLink(element)
+        });
+};
+
+initEvents();
 ```
-
-##### Thème de formulaire
-
-Un exemple de thème `form/theme.html.twig` :
-
-```twig
-{% block collection_row %}
-    <h2>{{ label }}</h2>
-    <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="{{ id }}">
-        Ajouter
-    </button>
-    <ul
-        class="{{ id }}"
-        data-index="{{ form|length > 0 ? form|last.vars.name + 1 : 0 }}"
-        data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}"
-        data-collection-holder
-    >
-        {% for chapterForm in form %}
-            <li data-collection-element>
-                {{ form_widget(chapterForm) }}
-            </li>
-        {% endfor %}
-    </ul>
-{% endblock collection_row %}
-```
-
-Pour [inclure le thème, vous avez plusieurs possibilités mentionnées dans le cours](25-formulaires.md#appliquer-les-themes).
 
 ### Envoi de fichiers (VichUploaderBundle)
 
