@@ -32,6 +32,13 @@ Si le projet a des Fixtures, les appliquer avec :
 - Ouvrir un terminal (dans votre IDE par exemple)
 - `symfony serve` qui vous dira sur quelle adresse vous connecter pour tester votre site
 
+## Créer une page 
+
+- Créer un controller ou une action dans un controller existant
+- Ajouter/modifier la ou les routes liées à votre action 
+- Adapter le contenu de l'action (s'assurer que les noms sont cohérents)
+- Créer/modifier le template associé, s'il y en a un.
+
 ## Commandes composer
 
 - `composer install` pour récupérer les dépendances définies dans le `.lock`
