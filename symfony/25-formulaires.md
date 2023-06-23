@@ -538,14 +538,15 @@ La [documentation de CollectionType](https://symfony.com/doc/current/reference/f
 Le champ `chapters` dans `src\Form\BookType.php` :
 ```php
 ->add('chapters', CollectionType::class, [
-    'entry_type'    => ChapterType::class,
-    'entry_options' => [
+    'entry_type'     => ChapterType::class,
+    'entry_options'  => [
         'label' => false,
     ],
-    'label'         => 'Chapitres',
-    'allow_add'     => true,
-    'allow_delete'  => true,
-    'by_reference'  => false,
+    'prototype_name' => 'chapters',
+    'label'          => 'Chapitres',
+    'allow_add'      => true,
+    'allow_delete'   => true,
+    'by_reference'   => false,
 ])
 ```
 
@@ -605,14 +606,15 @@ Un exemple de thème `form/theme.html.twig` :
         Ajouter
     </button>
     <ul
-        class="{{ id }}"
+        class="{{ id }} list-unstyled"
         data-index="{{ form|length > 0 ? form|last.vars.name + 1 : 0 }}"
         data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}"
+        data-prototype-name="__{{ form.vars.name }}__"
         data-collection-holder
     >
-        {% for form in form %}
+        {% for childForm in form %}
             <li data-collection-element>
-                {{ form_widget(form) }}
+                {{ form_widget(childForm) }}
             </li>
         {% endfor %}
     </ul>
@@ -627,55 +629,60 @@ Mon fichier `public/js/collection.js` :
 
 ```javascript
 const addFormToCollection = (e) => {
-    const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+    const collectionHolder = document.querySelector(
+        "." + e.currentTarget.dataset.collectionHolderClass
+    );
 
-    const item = document.createElement('li');
+    const item = document.createElement("li");
 
-    item.innerHTML = collectionHolder
-        .dataset
-        .prototype
-        .replace(
-            /__name__/g,
-            collectionHolder.dataset.index
-        );
+    let protoName = collectionHolder.dataset.prototypeName;
+
+    var regex = new RegExp(protoName,"g");
+
+    item.innerHTML = collectionHolder.dataset.prototype.replace(
+        regex,
+        collectionHolder.dataset.index
+    );
 
     collectionHolder.appendChild(item);
 
     collectionHolder.dataset.index++;
 
     addChildFormDeleteLink(item);
-    
+
+    item.querySelectorAll('.tom-select').forEach((el)=>{
+        let settings = {
+            plugins: ['remove_button']
+        };
+        new TomSelect(el,settings);
+    });
+
     initEvents();
 };
 
 const addChildFormDeleteLink = (item) => {
-    const removeFormButton = document.createElement('button');
-    removeFormButton.innerText = 'Supprimer';
-    removeFormButton.classList.add('btn');
-    removeFormButton.classList.add('btn-danger');
+    const removeFormButton = document.createElement("button");
+    removeFormButton.innerText = "Supprimer";
+    removeFormButton.classList.add("btn");
+    removeFormButton.classList.add("btn-danger");
 
-    item.prepend(removeFormButton);
+    item.append(removeFormButton);
 
-    removeFormButton.addEventListener('click', (e) => {
+    removeFormButton.addEventListener("click", (e) => {
         e.preventDefault();
         // remove the li for the tag form
         item.remove();
     });
-}
+};
 
-
-const initEvents = function () {
-    document
-        .querySelectorAll('.add_item_link')
-        .forEach(btn => {
-            btn.addEventListener("click", addFormToCollection)
-        });
-
-    document
-        .querySelectorAll('[data-collection-element]')
-        .forEach((element) => {
-            addChildFormDeleteLink(element)
-        });
+const initEvents = function() {
+    document.querySelectorAll("[data-collection-element]").forEach((element) => {
+        addChildFormDeleteLink(element);
+    });
+    document.querySelectorAll(".add_item_link").forEach((btn) => {
+        btn.removeEventListener("click", addFormToCollection);
+        btn.addEventListener("click", addFormToCollection);
+    });
 };
 
 initEvents();
