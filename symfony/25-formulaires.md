@@ -574,6 +574,7 @@ Mon fichier `templates/book/form.html.twig` :
             class="chapters"
             data-index="{{ form.chapters|length > 0 ? form.chapters|last.vars.name + 1 : 0 }}"
             data-prototype="{{ form_widget(form.chapters.vars.prototype)|e('html_attr') }}"
+            data-prototype-name="__{{ form.chapters.vars.name }}__"
             data-collection-holder
         >
             {% for chapterForm in form.chapters %}
@@ -649,13 +650,6 @@ const addFormToCollection = (e) => {
     collectionHolder.dataset.index++;
 
     addChildFormDeleteLink(item);
-
-    item.querySelectorAll('.tom-select').forEach((el)=>{
-        let settings = {
-            plugins: ['remove_button']
-        };
-        new TomSelect(el,settings);
-    });
 
     initEvents();
 };
