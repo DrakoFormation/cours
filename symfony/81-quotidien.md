@@ -6,9 +6,10 @@
 flowchart TD
     A[Message d'erreur] --> B{Résout l'erreur ?}
     B -->|Non| C["Contexte : <ul><li>Quelle route ?</li><li>Quel Controller ?</li><li>Quelles données ?</li><li>Quelles vues ?</li></ul>"]
-    C --> D{"Résout l'erreur ?"}
+    C --> J[Pour plus de contexte, <br/>ne pas hésiter à demander<br/>à Google/ChatGPT]
+    J --> D{"Résout l'erreur ?"}
     D -->|Oui| I
-    D --> |Non| E["Stack Trace : <ul><li>Quel fichier <b>à moi</b> ?</li><li>Quelle ligne ?</li>"]
+    D --> |Non| E["Stack Trace : <ul><li>Lequel de mes fichiers ?</li><li>Quelle ligne ?</li>"]
     E --> F{"Résout l'erreur ?"}
     F --> |Oui| I
     F --> |Non| G["Ajout d'un dd()/dump()/etc.<br/>à la première ligne<br/>ou une suivante"]
@@ -50,7 +51,7 @@ Après avoir ouvert un projet Symfony dans votre IDE, faites quelques étapes si
 - Lancer la commande `symfony serve`
 
 Vous pouvez la laisser tourner en tâche de fond (et y revenir de temps en temps si vous avez des erreurs) et pour utiliser la ligne de commande, vous pouvez ouvrir un nouveau terminal (avec les deux IDE, il y a un bouton `+`).
-Et vous pouvez utiliser votre site à l'adresse indiqué par le serveur (en général [http://127.0.0.1:8000](http://127.0.0.1:8000) ou [https://127.0.0.1:8000](https://127.0.0.1:8000)).
+Et vous pouvez utiliser votre site à l'adresse indiquée par le serveur (en général [http://127.0.0.1:8000](http://127.0.0.1:8000) ou [https://127.0.0.1:8000](https://127.0.0.1:8000)).
 
 Pour utiliser un nom de domaine, ajouter dans le fichier `/etc/hosts` (Linux et Mac) ou `C:\windows\system32\drivers\etc\hosts` sous Windows :
 ```
