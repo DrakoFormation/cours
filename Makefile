@@ -1,3 +1,15 @@
+FIG=docker compose
+
+# Dans la ligne de commande de notre machine, on vérifie si docker-compose est disponible
+HAS_DOCKER:=$(shell command -v $(FIG) 2> /dev/null)
+# Si c'est le cas, EXEC et EXEC_DB vont permettre d'exécuter des commandes dans les conteneurs
+ifdef HAS_DOCKER
+	EXEC=$(FIG) exec app
+# Sinon, on exécute les commandes sur la machine locale
+else
+	EXEC=
+endif
+
 # Source pour la documentation du Makefile : http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 .DEFAULT_GOAL := help
 
@@ -6,31 +18,31 @@
 # Commandes principales
 #
 #
-setup: ansible.install install ## Installe le projet
+setup: install ## Installe le projet
 
 install: ## Installe le projet et toutes ses dépendances, puis les assets et la base de données
-	npm install
+	$(EXEC) npm install
 
 update: ## Met à jour le projet, sa base de données et ses assets
-	npm install
+	$(EXEC) npm install
 
 upgrade: ## Met à jour le projet, sa base de données, ses assets et les versions des librairies front ET back
-	npm upgrade
+	$(EXEC) npm upgrade
 
 run: ## Met à jour les assets et surveille leur modification.
-	npm run dev
+	$(EXEC) npm run dev
 
 build: ## Construit les fichiers finaux (prod)
-	npm run build
+	$(EXEC) npm run build
 
 start:
-	docker compose up -d
+	$(FIG) up -d
 
 stop:
-	docker compose down
+	$(FIG) down
 
 destroy:
-	docker compose down -v
+	$(FIG) down -v
 
 deploy: ## Déploie sur le serveur de prod
 	ansible-playbook -i ansible/prod ansible/deploy/deploy.yml
