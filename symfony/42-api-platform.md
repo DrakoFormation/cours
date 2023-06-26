@@ -51,7 +51,7 @@ Une fois cela fait, il faut préciser à API Platform quelles entités nous voul
 
 namespace App\Entity;
 
-use APIPlatform\Core\Annotation\APIResource;
+use ApiPlatform\Metadata\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
@@ -82,7 +82,7 @@ Grâce à des annotations / attributs, il est possible de préciser quelles prop
 
 namespace App\Entity;
 
-use APIPlatform\Core\Annotation\APIResource;
+use ApiPlatform\Metadata\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource(
@@ -110,22 +110,19 @@ Vous pouvez également aller plus loin, en précisant les groupes de (dé)normal
 
 namespace App\Entity;
 
-use APIPlatform\Core\Annotation\APIResource;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Put;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource(
     normalizationContext: ['groups' => ['read']],
     denormalizationContext: ['groups' => ['write']],
-    itemOperations: [
-        'get',
-        'put' => [
-            'denormalization_context' => ['groups' => ['put']],
-        ],
-    ],
-    collectionOperations: [
-        'get' => [
-            'normalization_context' => ['groups' => ['read:collection']],
-        ],
+    operations: [
+        new Get(),
+        new Put(denormalizationContext: ['groups' => ['put']]),
+        new GetCollection(normalizationContext: ['groups' => ['read:collection']]),
     ],
 )]
 class Test 
