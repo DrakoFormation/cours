@@ -329,6 +329,7 @@ Ce filtre permet de récupérer la longueur d'une chaine de caractères, le nomb
 
 `path()` permet d'avoir l'URi vers une de vos routes
 ```twig
+{# path prend en premier paramètre le nom d'une route, et en second un "objet" avec les paramètres de la route #}
 {{ path('blog_show', { slug: article.slug }) }}
 ```
 
@@ -336,7 +337,7 @@ Ce filtre permet de récupérer la longueur d'une chaine de caractères, le nomb
 
 `url()` permet d'avoir une url (complète, avec le http(s), le nom de domaine, etc.)
 ```twig
-{# path prend en premier paramètre le nom d'une route, et en second un "objet" avec les paramètres de la route #}
+{# url prend en premier paramètre le nom d'une route, et en second un "objet" avec les paramètres de la route #}
 {{ url('blog_show', { slug: article.slug }) }}
 ```
 
