@@ -155,7 +155,7 @@ L'idée est alors de s'assurer d'avoir la dernière version de nos fichiers (ain
 
 ### Mise en place d'un déploiement avec Deployer
 
-Tout d'abord, [télécharger Deployer](https://deployer.org/download). Pour le moment, je vous conseille de placer le fichier `deployer.phar` à la racine de votre projet (en attenant que la dernière version soit disponible via composer).
+Tout d'abord, [télécharger Deployer](https://deployer.org/download) ou lancer la commande `composer require deployer/deployer --dev`. Pour le moment, je vous conseille de placer le fichier `deployer.phar` à la racine de votre projet (en attenant que la dernière version soit disponible via composer).
 
 Lancer la commande `php ./deployer.phar init` pour préparer le script. Personnellement, je choisis un fichier de configuration en Yaml, pour un projet Symfony et le lien vers mon repository est déjà entré.
 
