@@ -155,11 +155,10 @@ L'idée est alors de s'assurer d'avoir la dernière version de nos fichiers (ain
 
 ### Mise en place d'un déploiement avec Deployer
 
-Tout d'abord, [télécharger Deployer](https://deployer.org/download) ou lancer la commande `composer require deployer/deployer --dev`. Pour le moment, je vous conseille de placer le fichier `deployer.phar` à la racine de votre projet (en attenant que la dernière version soit disponible via composer).
+- Installer deployer avec composer `composer require deployer/deployer --dev`.
+- Mettre en place la configuration nécessaire avec `./vendor/bin/dep init` (je vous conseille le format yaml)
 
-Lancer la commande `php ./deployer.phar init` pour préparer le script. Personnellement, je choisis un fichier de configuration en Yaml, pour un projet Symfony et le lien vers mon repository est déjà entré.
-
-J'obtiens un fichier `deploy.yaml` qu'il ne me reste qu'à adapter.
+J'obtiens un fichier `deploy.yaml` qu'il ne me reste qu'à adapter :
 
 ```yaml
 # Cette ligne permet d'utiliser la configuration toute prête pour un projet Symfony
@@ -194,7 +193,7 @@ after:
   deploy:failed: deploy:unlock
 ```
 
-Prenons un code un peu amélioré et voyons ce qui a été ajouté
+Prenons un code un peu amélioré et voyons ce qui a été ajouté :
 
 ```yaml
 # Cette ligne permet d'utiliser la configuration toute prête pour un projet Symfony
