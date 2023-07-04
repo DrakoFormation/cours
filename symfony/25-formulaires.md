@@ -542,7 +542,7 @@ Le champ `chapters` dans `src\Form\BookType.php` :
     'entry_options'  => [
         'label' => false,
     ],
-    'prototype_name' => 'chapters',
+    'prototype_name' => '__chapters__',
     'label'          => 'Chapitres',
     'allow_add'      => true,
     'allow_delete'   => true,
@@ -567,23 +567,7 @@ Mon fichier `templates/book/form.html.twig` :
         {{ form_row(form.title) }}
         {{ form_row(form.publishedAt) }}
         {{ form_row(form.authors) }}
-
-        <h2>{{ form_label(form.chapters) }}</h2>
-        <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="chapters">Ajouter un chapitre</button>
-        <ul
-            class="chapters"
-            data-index="{{ form.chapters|length > 0 ? form.chapters|last.vars.name + 1 : 0 }}"
-            data-prototype="{{ form_widget(form.chapters.vars.prototype)|e('html_attr') }}"
-            data-prototype-name="__{{ form.chapters.vars.name }}__"
-            data-collection-holder
-        >
-            {% for chapterForm in form.chapters %}
-                <li data-collection-element>
-                    {{ form_widget(chapterForm) }}
-                </li>
-            {% endfor %}
-        </ul>
-        <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="chapters">Ajouter un chapitre</button>
+        {{ form_row(form.chapters) }}
 
         <button type="submit" class="btn btn-primary">Valider</button>
     {{ form_end(form) }}
