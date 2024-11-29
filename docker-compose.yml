@@ -9,14 +9,3 @@ services:
       - "8080:8080"
     tty: true
     working_dir: /srv
-  timetagger:
-    image: ghcr.io/almarklein/timetagger
-    ports:
-      - "8081:8081"
-    volumes:
-      - ~/_timetagger:/root/_timetagger
-    environment:
-      - TIMETAGGER_BIND=0.0.0.0:8081
-      - TIMETAGGER_DATADIR=/root/_timetagger
-      - TIMETAGGER_LOG_LEVEL=info
-      - TIMETAGGER_CREDENTIALS=remi:$$2a$$08$$Kvjt1iV6Jskb5K0BEltfy.LU5os1ryXHArdOzpWBXfD3JlHIIIB8m

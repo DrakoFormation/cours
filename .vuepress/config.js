@@ -6,6 +6,7 @@ let ciFiles = glob.sync('ci/**/!(README).md');
 let gitFiles = glob.sync('git/**/!(README).md');
 let linuxFiles = glob.sync('linux/**/!(README).md');
 let jsFiles = glob.sync('js/**/!(README).md');
+let deployFiles = glob.sync('deploy/**/!(README).md');
 
 module.exports = {
     description: 'Les formations de Rémi Jarjat pour Human Booster',
@@ -50,7 +51,12 @@ module.exports = {
                 children: jsFiles
             },
             '/lamp/',
-            '/deploy/',
+            {
+                title: 'Déploiement',
+                path: '/deploy/',
+                collapsable: true,
+                children: deployFiles
+            },
             '/docker/',
             {
                 title: 'Intégration continue',
