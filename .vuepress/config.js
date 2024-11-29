@@ -90,6 +90,7 @@ module.exports = {
         ['@vuepress/nprogress'],
         ['@vuepress/back-to-top'],
         ['vuepress-plugin-mermaidjs'],
+        ['vuepress-plugin-table-of-contents'],
         [
             '@vuepress/last-updated',
             {

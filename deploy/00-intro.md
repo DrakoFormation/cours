@@ -1,5 +1,7 @@
 # Déployer une application
 
+<TOC/>
+
 ## Un serveur, comment ça marche ?
 
 ```mermaid
@@ -21,13 +23,31 @@ Les étapes représentées dans le schéma ci-dessus :
 4. Le serveur Web fait le lien entre l'url demandée et un ensemble de fichiers et ces fichiers sont interprétés / exécutés.
 5. Le serveur Web renvoie la réponse à l'utilisateur.
 
+On pourrait ajouter d'autres étapes (ce qu'il se passe au sein du serveur), mais c'est une autre histoire ;).
+
 ## DevOps
+
+La mise en place d'un processus de déploiement (un script pour l'automatiser) relève souvent du travail du DevOps.
+
+> DevOps est un ensemble de pratiques et d'outils, ainsi qu'une philosophie culturelle. Son but est d'automatiser et d'intégrer les processus entre les équipes de développement et informatiques. DevOps met l'accent sur l'autonomisation des équipes, la communication et la collaboration transverses ainsi que l'automatisation technologique.
+>
+> -- <cite>[Atlassian](https://www.atlassian.com/fr/devops)</cite>
+
+On parle de DevOps pour désigner un ensemble de méthodes de travail, permettant de simplifier la communication et le travail des développeurs et des équipes opérationnelles (d'où DevOps).
+Le but est de "*graisser les rouages*" et de faciliter le travail des équipes, en général en automatisant certaines tâches (<abbr title="Continuous Integration">CI</abbr> / <abbr title="Continuous Deployment">CD</abbr>, pipelines, Actions, etc.).
+
+![Schéma représentant le cycle de vie DevOps](https://wac-cdn.atlassian.com/dam/jcr:ef9fe684-c6dc-4ba0-a636-4ef7bcfa11f1/New%20DevOps%20Loop%20image.png?cdnVersion=2449)
 
 ## Environnements
 
-- Test ([SIT](https://en.wikipedia.org/wiki/System_integration_testing))
-- Acceptation Client ([UAT](https://uit.stanford.edu/pmo/UAT))
-- prod
+Souvent, nos réalisations vont devoir être vérifiés par plusieurs personnes, pour vérifier la conformité avec la demande initiale :
+- soit même : environnement de travail local, pour développer et voir le résultat de ce que l'on produit + tests unitaires et fonctionnels automatiques
+- nos pairs / notre équipe : [SIT](https://en.wikipedia.org/wiki/System_integration_testing) ou [Test d'intégration](https://fr.wikipedia.org/wiki/Test_d%27int%C3%A9gration)
+- Vérification par le client : [UAT](https://uit.stanford.edu/pmo/UAT) ou [Test de validation](https://fr.wikipedia.org/wiki/Test_de_validation)
+
+Ensuite vient la mise en production.
+
+Toutes ces étapes nécessitent un déploiement sur un environnement différent, d'où la nécessité d'avoir un processus fixe.
 
 ## Différents types de mise en production
 
@@ -38,7 +58,7 @@ Les étapes représentées dans le schéma ci-dessus :
 ## FTP, SCP et SSH
 
 
-## Déploiement par FTP
+### Déploiement par FTP
 
 En vidéo :
 

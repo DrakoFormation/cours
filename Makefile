@@ -36,7 +36,7 @@ build: ## Construit les fichiers finaux (prod)
 	$(EXEC) npm run build
 
 start:
-	$(FIG) up -d
+	$(FIG) up --remove-orphans
 
 stop:
 	$(FIG) down
