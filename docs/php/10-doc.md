@@ -344,7 +344,7 @@ Le *FQCN* (Fully Qualified Class Name) est composé de :
 
 #### Correspondances entre namespace et fichier
 
-![Des exemples de nommages, avec les dossiers correspondants](/assets/img/php/psr4-example.png)
+![Des exemples de nommages, avec les dossiers correspondants](./img/psr4-example.png)
 
 ### Appliquer toutes ces normes
 
@@ -359,6 +359,6 @@ Installation dans VS Code :
 - [Télécharger PHP CS Fixer](https://cs.symfony.com/download/php-cs-fixer-v3.phar) (je le télécharge dans le dossier `www` de mon wamp)
 - Configurer l'extension avec le chemin de php et celui de php-cs-fixer
 
-![Installer PHP CS Fixer](/assets/img/php/phpcsfixer-install-1.png)
+![Installer PHP CS Fixer](./img/phpcsfixer-install-1.png)
 
-![Installer PHP CS Fixer](/assets/img/php/phpcsfixer-install-2.png)
+![Installer PHP CS Fixer](./img/phpcsfixer-install-2.png)

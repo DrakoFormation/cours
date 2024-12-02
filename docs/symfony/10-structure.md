@@ -15,7 +15,7 @@
 
 Regardons le contenu du projet que nous venons de créer. Il contient déjà de nombreux fichiers et dossiers :
 
-![](/assets/img/php/symfony_fichiers.png)
+![](./img/symfony_fichiers.png)
 
 Prenons d'abord les dossiers dans l'ordre d'apparition :
 

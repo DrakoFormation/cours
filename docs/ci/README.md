@@ -222,15 +222,15 @@ Vous pouvez voir les pipelines directement dans la partie `CI/CD` de votre repos
 
 Sur la partie `Project Overview` :
 
-![](/assets/img/ci/ci-pipeline-overview.png)
+![](./img/ci-pipeline-overview.png)
 
 Sur la liste des Merge Requests : 
 
-![](/assets/img/ci/ci-pipeline-mr.png)
+![](./img/ci-pipeline-mr.png)
 
 Ou sur une `Merge Request` : 
 
-![](/assets/img/ci/ci-pipeline-mr2.png)
+![](./img/ci-pipeline-mr2.png)
 
 C'est sur ce dernier affichage que vous pouvez avoir l'adresse pour une [Review App](https://docs.gitlab.com/ee/ci/review_apps/), qui est le lien entre une branche de votre repository et un [environnement](https://docs.gitlab.com/ee/ci/environments/index.html) (un serveur permettant de tester cette branche, en somme).
 

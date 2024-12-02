@@ -415,7 +415,7 @@ Dans l'affichage de notre formulaire, on peut ajouter un `dump()` pour trouver l
 
 Avec ce dump, nous pouvons trouver l'information ici :
 
-![](/assets/img/php/block_prefixes.PNG)
+![](./img/block_prefixes.png)
 
 Cette variable `block_prefixes` nous donne la base des différents noms que nous pouvons donner à notre block (dans notre thème de formulaire), du plus générique (`form`) au plus spécifique (`_dog_breeds`). Grâce à cela, nous pouvons déduire les noms possibles pour notre bloc : 
 

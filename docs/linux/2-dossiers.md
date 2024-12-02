@@ -4,7 +4,7 @@ En vidéo :
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f9d9d06790484fa6884f04298cb6310a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-![Le système de fichiers de Linux](/assets/img/linux/linux-filesystem.png)
+![Le système de fichiers de Linux](./img/linux-filesystem.png)
 
 ## Les dossiers essentiels
 

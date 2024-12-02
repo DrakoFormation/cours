@@ -37,41 +37,41 @@ En vidéo :
 
 - Ensemble de données éparpillées regroupées en une source unique
 
-![](/assets/img/linux/virtualization-data.png)
+![](./img/virtualization-data.png)
 
 #### Virtualisation des postes de travail
 
 - Permet de déployer, administrer et surveiller des postes de travail depuis un seul outil
 
-![](/assets/img/linux/virtualization-desktop.png)
+![](./img/virtualization-desktop.png)
 
 #### Virtualisation de serveurs
 
 - Une même machine héberge plusieurs serveurs et répartie les resources
 
-![](/assets/img/linux/virtualization-server.png)
+![](./img/virtualization-server.png)
 
 #### Virtualisation des systèmes d'exploitation
 
 - Avoir accès à d'autres OS dans une même machine
 
-![](/assets/img/linux/virtualization-os.png)
+![](./img/virtualization-os.png)
 
 #### Virtualisation de réseau
 
 - Séparation des fonctions clés d'un réseau en différents environnements et regroupement des machines physiques
 
-![](/assets/img/linux/virtualization-network.png)
+![](./img/virtualization-network.png)
 
 ### Hyperviseurs
 
 - Logiciel chargé de répartir les resources
 
-[![](/assets/img/linux/hyperviseur.png)](https://openclassrooms.com/fr/courses/2035806-virtualisez-votre-architecture-et-vos-environnements-de-travail/6313926-decouvrez-la-virtualisation-une-reponse-a-des-problemes-de-terrain)
+[![](./img/hyperviseur.png)](https://openclassrooms.com/fr/courses/2035806-virtualisez-votre-architecture-et-vos-environnements-de-travail/6313926-decouvrez-la-virtualisation-une-reponse-a-des-problemes-de-terrain)
 
 #### Deux types principaux d'hyperviseurs
 
-![](/assets/img/linux/hyperviseur-types.jpg) 
+![](./img/hyperviseur-types.jpg) 
 
 ##### Hyperviseur de type 1 (bare metal)
 
@@ -102,7 +102,7 @@ En vidéo :
 - élasticité : pas d'allocation de resource d'avance.
 - performance : pas d'hyperviseur pas d'OS invité.
 
-![](/assets/img/linux/container-vs-vm.png)
+![](./img/container-vs-vm.png)
 
 ### Docker et Kubernetes
 

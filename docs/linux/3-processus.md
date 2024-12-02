@@ -31,11 +31,11 @@ Exemples : Apache, Nginx, cron, Docker
 
 - Une interface minimale
 
-![Un exemple de terminal classique (bash)](/assets/img/linux/terminal_bash.png)
+![Un exemple de terminal classique (bash)](./img/terminal_bash.png)
 
 - Ou un peu moins
 
-![Un exemple de terminal amélioré (zsh + oh my zsh)](/assets/img/linux/terminal_mine.png)
+![Un exemple de terminal amélioré (zsh + oh my zsh)](./img/terminal_mine.png)
 
 ## Personnaliser son terminal
 

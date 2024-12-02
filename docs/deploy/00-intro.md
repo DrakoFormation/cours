@@ -80,7 +80,7 @@ Les options par défaut de FileZilla font en général très bien l'affaire, si 
 
 Pour cela, ouvrez le gestionnaire de sites (`Fichiers > Gestionnaire de sites...` ou le bouton "Gestionnaire de sites" en haut à gauche) et entrez les informations requises.
 
-![](/assets/img/deploy/filezilla-new-site.png)
+![](./img/filezilla-new-site.png)
 
 - Protocole : FTP ou SFTP sont les deux options les plus courantes (nous allons choisir SFTP)
 - Hôte : adresse IP ou nom de domaine fourni par l'hébergeur

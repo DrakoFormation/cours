@@ -31,6 +31,6 @@ git clone lienDuProjet chemin/vers/le/dossier
 
 Sur Github, vous trouverez le lien du projet grâce au bouton vert `Code` : 
 
-![](/assets/img/git/url_clone.png)
+![](./img/url_clone.png)
 
 :warning: Pour travailler sur un projet avec Git, on ne télécharge jamais de zip ou autre fichier, mais on passe **toujours** par la commande `clone`. 

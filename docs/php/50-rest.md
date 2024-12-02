@@ -71,7 +71,7 @@ Pour créer un serveur (ou service) REST, il faut qu'il :
 
 Pour créer une API, on va utiliser un ensemble réduit d'urls et la plupart des verbes HTTP (comme GET, POST, PUT, PATCH, UPDATE, etc.).
 
-![Exemple d'un ensemble de routes REST, avec ApiPlatform (Swagger UI)](/assets/img/php/rest_example.png)
+![Exemple d'un ensemble de routes REST, avec ApiPlatform (Swagger UI)](./img/rest_example.png)
 
 Dans l'image ci-dessus, remarquez que l'on utilise 2 urls différentes, mais 5 verbes HTTP différents pour obtenir 6 routes différentes, avec des fonctionnements différents :
 - GET `/api/recipes/` retourne une liste d'objets `recipe`
