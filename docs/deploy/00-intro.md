@@ -1,6 +1,5 @@
 # Déployer une application
 
-<TOC/>
 
 ## Un serveur, comment ça marche ?
 
