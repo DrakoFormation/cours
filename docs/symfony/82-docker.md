@@ -1,5 +1,7 @@
 # Travailler avec Docker
 
+[[toc]]
+
 Dans les dernières versions de Symfony, la création d'un projet s'accompagne d'un fichier `docker-compose.yml`, permettant de travailler facilement avec Docker. Grâce à cela, plus besoin de Wamp !
 
 ## Pré-requis

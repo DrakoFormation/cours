@@ -1,5 +1,7 @@
 # Architecture MVC
 
+[[toc]]
+
 [L'article Wikipédia sur le MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)
 
 ## Principes

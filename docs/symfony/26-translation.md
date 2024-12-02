@@ -1,7 +1,9 @@
 # Les traductions
 
+[[toc]]
+
 La [documentation officielle sur les traductions](https://symfony.com/doc/current/translation.html) et [la Fast-Track de Symfony](https://symfony.com/doc/current/the-fast-track/en/28-intl.html)
-Nous allons directement utiliser [le format ICU pour gérer les paramètres et les pluriels](https://symfony.com/doc/current/translation/message_format.html), dans nos traductions
+Nous allons directement utiliser [le format ICU pour gérer les paramètres et les pluriels](https://symfony.com/doc/current/translation/message_format.html), dans nos traductions.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/9c40d518fead4ceab470b37c718f80f7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 

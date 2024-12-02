@@ -1,5 +1,7 @@
 # Connexion et sécurisation
 
+[[toc]]
+
 La [documentation officielle](https://symfony.com/doc/current/security.html), que l'on va suivre / reprendre.
 
 :warning: Cette partie a été écrite pour Symfony 5.3 et plusieurs choses ont été modifiées depuis la version 5.2 (le fonctionnement reste le même, mais plusieurs éléments étaient plus complexes). Vous trouverez une [version de présentation de la version 5.2 de Symfony dans cette vidéo](https://www.loom.com/embed/c35c8ab1e4614a4ebf0eeffd0f8fad94).

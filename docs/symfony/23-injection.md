@@ -1,5 +1,7 @@
 # Les services et l'injection de dépendances
 
+[[toc]]
+
 [La documentation spécifique aux services](https://symfony.com/doc/current/service_container.html)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/58f0891c518540cfbb7966680bd79a1a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

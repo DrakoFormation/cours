@@ -1,5 +1,7 @@
 # API Platform
 
+[[toc]]
+
 Cette partie concerne des **bases** d'[API Platform](https://api-platform.com/), nous n'allons pas évoquer de fonctionnalités avancées et resterons sur les notions de base, pour créer une API simple rapidement.
 
 [La documentation officielle](https://api-platform.com/)

@@ -45,15 +45,11 @@ Souvent, nos réalisations vont devoir être vérifiés par plusieurs personnes,
 - nos pairs / notre équipe : [SIT](https://en.wikipedia.org/wiki/System_integration_testing) ou [Test d'intégration](https://fr.wikipedia.org/wiki/Test_d%27int%C3%A9gration)
 - Vérification par le client : [UAT](https://uit.stanford.edu/pmo/UAT) ou [Test de validation](https://fr.wikipedia.org/wiki/Test_de_validation)
 
-Ensuite vient la mise en production.
+Ensuite vient la mise en production, c'est-à-dire mettre la dernière version à disposition des clients finaux de l'application.
 
 Toutes ces étapes nécessitent un déploiement sur un environnement différent, d'où la nécessité d'avoir un processus fixe.
 
-## Différents types de mise en production
-
-- totale
-- partielle
-- progressive
+De la même manière, ces différents environnements ne vont pas présenter exactement les mêmes développements (ou même tickets) en même temps. Ce qui implique une méthodologie de travail, pour s'y retrouver.
 
 ## FTP, SCP et SSH
 

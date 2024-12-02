@@ -1,5 +1,7 @@
 # Doctrine et la BdD
 
+[[toc]]
+
 [La documentation officielle](https://symfony.com/doc/current/doctrine.html) que nous allons suivre.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/02251e40b02349dd8bd34775a05a4e2c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

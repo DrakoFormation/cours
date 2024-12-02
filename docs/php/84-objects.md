@@ -1,5 +1,7 @@
 # Exercices - Objets
 
+[[toc]]
+
 Pré-requis :
 - avoir un environnement de travail ([Wamp](https://www.wampserver.com/) / [Xampp](https://www.apachefriends.org/fr/index.html) / [Mamp](https://www.mamp.info/en/downloads/) ou équivalent)
 - avoir des bases de PHP

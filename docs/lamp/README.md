@@ -1,5 +1,7 @@
 # Serveur Lamp
 
+[[toc]]
+
 Un serveur <abbr title="Linux Apache MySQL Php">Lamp</abbr> est en réalité un ensemble de 3 programmes :
 
 - Apache

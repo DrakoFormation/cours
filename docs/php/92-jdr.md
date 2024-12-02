@@ -1,5 +1,7 @@
 # Projet - Personnages de Jeux de Rôle
 
+[[toc]]
+
 Nous allons mettre en place un projet Php, rendu sur Github/Gitlab, en utilisant des tickets (outil à définir). Le processus de travail doit être comme suit : 
 - utiliser Git pour enregistrer les modifications de chaque développeur
 - une branche doit être créée pour chaque ticket de code

@@ -2,6 +2,8 @@
 
 La correction de ces exercices est disponible sur un [repository Github dédié](https://github.com/Dreeckan/test-symfony)
 
+[[toc]]
+
 ## 1. Créer une première page avec Symfony (exercice guidé)
 
 - Avoir un projet Symfony neuf (fraîchement créé, sans modification)

@@ -1,5 +1,7 @@
 # Symfony au quotidien
 
+[[toc]]
+
 ## Que faire devant un bug ?
 
 ```mermaid

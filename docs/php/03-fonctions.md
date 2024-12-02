@@ -1,5 +1,7 @@
 # Procédures et fonctions
 
+[[toc]]
+
 En vidéo :
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/238d4e8be4d741a08b5fa2fa5fdd2e70" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

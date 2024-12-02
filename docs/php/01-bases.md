@@ -1,5 +1,7 @@
 # Bases du PHP
 
+[[toc]]
+
 Pour chaque section de ce cours, vous trouverez une série de petits exercices, à réaliser dans un projet dédié (idéalement, versionnez-le !). 
 Nous allons réaliser un mini-site de QCM, tout au long de ce cours.
 

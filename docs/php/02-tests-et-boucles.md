@@ -1,5 +1,7 @@
 # Tests et boucles
 
+[[toc]]
+
 La [documentation PHP](https://www.php.net/manual/fr/language.control-structures.php)
 
 En vidéo :

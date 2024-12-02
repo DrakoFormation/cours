@@ -1,5 +1,6 @@
-
 # Interagir avec l'utilisateur
+
+[[toc]]
 
 En vidéo : 
 

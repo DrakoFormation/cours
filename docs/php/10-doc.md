@@ -1,5 +1,7 @@
 # PHP Doc et PSR
 
+[[toc]]
+
 Cette partie du cours parle de documentation et de normes... Mais aussi de normes de documentation ;) .
 
 ## En résumé

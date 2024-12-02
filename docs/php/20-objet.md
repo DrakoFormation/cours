@@ -1,5 +1,7 @@
 # PHP Orienté objet
 
+[[toc]]
+
 [La documentation PHP](https://www.php.net/manual/fr/language.oop5.basic.php)
 [Sur OpenClassRooms](https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php)
 

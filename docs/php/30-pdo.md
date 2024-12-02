@@ -1,5 +1,7 @@
 # Manipuler la BdD avec PDO (PHP Data Object)
 
+[[toc]]
+
 ## L'extension PDO
 
 [La documentation sur PDO](https://www.php.net/manual/fr/book.pdo.php)

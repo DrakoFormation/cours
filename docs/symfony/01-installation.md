@@ -1,5 +1,7 @@
 # Installer Symfony et son environnement de travail
 
+[[toc]]
+
 Avant de pouvoir travailler concrètement sur Symfony, il faut mettre en place notre environnement de travail.
 
 Pour cela, nous allons installer :

@@ -1,5 +1,7 @@
 # Factorisation
 
+[[toc]]
+
 ## Classes et méthodes abstraites
 
 [La documentation](https://www.php.net/manual/fr/language.oop5.abstract.php)
