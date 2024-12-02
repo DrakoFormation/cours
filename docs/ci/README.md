@@ -343,7 +343,7 @@ Et beaucoup d'autres, que je vous invite [à découvrir ici](https://blog.eleven
 
 L'[introduction officielle aux GitHub Actions](https://docs.github.com/en/actions/learn-github-actions), et la vidéo qui va avec : 
 
-<iframe class="yt-video" src="https://www.youtube-nocookie.com/embed/cP0I9w2coGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<VidStack src="youtube/cP0I9w2coGU"/>
 
 :warning: L'utilisation de GitHub Actions est limitée et dépend de votre abonnement à GitHub (pour les projets professionnels d'envergure, un abonnement peut être nécessaire, mais pas pour les projets personnels, normalement). Voir [la documentation officielle sur les limitations de GitHub Actions selon votre abonnement](https://docs.github.com/en/actions/reference/usage-limits-billing-and-administration#about-billing-for-github-actions).
 

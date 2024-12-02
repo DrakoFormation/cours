@@ -1,9 +1,0 @@
-services:
-  app:
-    image: drakona/node:14-alpine-auto
-    volumes:
-      - .:/srv
-    ports:
-      - "8080:8080"
-    tty: true
-    working_dir: /srv
