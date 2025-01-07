@@ -1,3 +1,7 @@
+---
+date: 2021-04-02
+---
+
 # Javascript
 
 Toutes les bases de ce cours peuvent être résumées dans un [pense-bête de 13 pages](./img/js-cheatsheet.pdf).

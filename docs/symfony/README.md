@@ -1,3 +1,7 @@
+---
+date: 2021-02-22
+---
+
 # Symfony
 
 Cette partie va reprendre en grande partie le fonctionnement de [la documentation officielle de Symfony](https://symfony.com/doc/current/index.html). Cette documentation servira de référence assez souvent tout au long de ce cours. Il existe également un certain nombre de [bonnes pratiques pour travailler avec Symfony](https://symfony.com/doc/current/best_practices.html), que nous allons suivre tout au long de ce cours.

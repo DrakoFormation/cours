@@ -1,3 +1,7 @@
+---
+date: 2023-01-09
+---
+
 # Correction des exercices
 
 Tous ces exercices prennent place dans un terminal Linux et sont testés avec une machine Ubuntu. Si des adaptations sont nécessaires pour un Mac ou d'autres systèmes UNIX, merci de me le signaler ;) .

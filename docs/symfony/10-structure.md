@@ -1,3 +1,7 @@
+---
+date: 2021-02-22
+---
+
 # Structure et utilisation d'un projet
 
 [[toc]]

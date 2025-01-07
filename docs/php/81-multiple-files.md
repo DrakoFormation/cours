@@ -1,3 +1,7 @@
+---
+date: 2023-04-06
+---
+
 # Exercices - Séparer en plusieurs fichiers
 
 [[toc]]

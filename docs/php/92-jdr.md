@@ -1,3 +1,7 @@
+---
+date: 2022-02-01
+---
+
 # Projet - Personnages de Jeux de Rôle
 
 [[toc]]

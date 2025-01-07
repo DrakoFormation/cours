@@ -1,3 +1,7 @@
+---
+date: 2021-04-02
+---
+
 # Programmation orientée objet
 
 Jusqu'ici, nous avons codé nos programmes de manière procédurale. C'est-à-dire que le code se trouve dans l'ordre de son exécution (le code est exécuté ligne par ligne). En POO (Programmation Orientée Objet), tout s'articule autour de la notions d'objets : des éléments indépendants ayant leurs caractéristiques (appelées propriétés) et leurs fonctionnalités (

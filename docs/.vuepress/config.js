@@ -3,16 +3,19 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { componentsPlugin } from "vuepress-plugin-components";
+import { markdownExtPlugin } from '@vuepress/plugin-markdown-ext';
+import { appendDatePlugin } from '@vuepress/plugin-append-date';
 
 export default defineUserConfig({
   lang: 'fr-FR',
-
+  base: '/cours/',
   title: 'Cours de Rémi Jarjat',
   description: 'Les formations de Rémi Jarjat pour Human Booster',
 
   theme: defaultTheme({
     logo: '/assets/LogoHB2.png',
-
+    contributors: false,
+    lastUpdatedText: 'Dernières mise à jour ',
     sidebar: [
       '/',
       '/general/',
@@ -133,6 +136,7 @@ export default defineUserConfig({
         collapsible: true,
         children: [
           '00-intro',
+          '05-ftp',
           '10-wordpress',
           '20-git',
           '21-github-pages',
@@ -150,14 +154,17 @@ export default defineUserConfig({
     mdEnhancePlugin({
       // Enable mermaid
       mermaid: true,
-      footnote: true,
-      tasklist: true,
-      component: true,
     }),
     componentsPlugin({
       components: [
         'VidStack'
       ]
     }),
+    markdownExtPlugin({
+      footnote: true,
+      component: true,
+      tasklist: true,
+    }),
+    appendDatePlugin(),
   ]
 })

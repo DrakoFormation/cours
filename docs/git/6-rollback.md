@@ -1,3 +1,7 @@
+---
+date: 2021-10-08
+---
+
 # Annuler des changements
 
 ## Checkout - Annuler des modifications

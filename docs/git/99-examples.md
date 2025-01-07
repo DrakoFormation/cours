@@ -1,3 +1,7 @@
+---
+date: 2021-10-08
+---
+
 # Exemples pratiques
 
 Cette partie est dédiée à des points précis ou des cas concrets, en vidéo.

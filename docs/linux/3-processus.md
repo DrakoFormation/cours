@@ -1,3 +1,7 @@
+---
+date: 2023-01-09
+---
+
 # Les processus
 
 Le cours en vidéo : 

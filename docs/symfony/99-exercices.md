@@ -1,3 +1,7 @@
+---
+date: 2021-02-22
+---
+
 # Exercices
 
 La correction de ces exercices est disponible sur un [repository Github dédié](https://github.com/Dreeckan/test-symfony)

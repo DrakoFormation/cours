@@ -107,3 +107,11 @@
   --vp-c-control-hover: rgb(101 117 133 / 18%);
   --vp-c-control-disabled: #363636;
 }
+
+[data-theme="dark"] .mermaid-preview {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.mermaid-preview {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}

@@ -1,3 +1,7 @@
+---
+date: 2021-04-02
+---
+
 # JQuery
 
 [Documentation](https://api.jquery.com/)

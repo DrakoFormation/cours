@@ -1,3 +1,7 @@
+---
+date: 2024-11-29
+---
+
 # Intégrer Git dans le processus
 
 ## Utiliser SSH et Git

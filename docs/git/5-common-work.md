@@ -1,3 +1,7 @@
+---
+date: 2021-10-08
+---
+
 # Mise en commun du travail
 
 Introduction en vidéo : 

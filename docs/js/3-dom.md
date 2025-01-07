@@ -1,3 +1,7 @@
+---
+date: 2021-04-02
+---
+
 # Le DOM
 
 Le DOM (Document Object Model ou modèle d'objet de document en français) est une représentation du HTML d'une page, qui permet d'accéder aux éléments et de les modifier en js. Nous allons donc pouvoir interagir avec ce DOM pour :

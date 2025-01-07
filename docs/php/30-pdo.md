@@ -1,3 +1,7 @@
+---
+date: 2021-02-05
+---
+
 # Manipuler la BdD avec PDO (PHP Data Object)
 
 [[toc]]

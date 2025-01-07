@@ -1,3 +1,7 @@
+---
+date: 2023-01-09
+---
+
 # Commandes avancées
 
 ## Lister les processus en cours

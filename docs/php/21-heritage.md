@@ -1,3 +1,7 @@
+---
+date: 2023-01-11
+---
+
 # Héritage et objets
 
 [[toc]]

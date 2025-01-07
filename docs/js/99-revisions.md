@@ -1,3 +1,7 @@
+---
+date: 2021-04-20
+---
+
 # Révisions
 
 Un ensemble d'exercices pour revoir un peu tous les éléments abordés dans le cours.

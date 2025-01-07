@@ -1,3 +1,7 @@
+---
+date: 2022-11-03
+---
+
 # Exercices
 
 ## Manipuler les bases de Git et GitHub

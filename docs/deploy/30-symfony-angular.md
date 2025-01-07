@@ -1,3 +1,7 @@
+---
+date: 2024-11-29
+---
+
 # Symfony et Angular
 
 ## Automatiser le déploiement

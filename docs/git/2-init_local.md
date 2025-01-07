@@ -1,3 +1,7 @@
+---
+date: 2021-10-08
+---
+
 # Créer un dépôt (local)
 
 En vidéo :

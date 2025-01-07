@@ -1,3 +1,7 @@
+---
+date: 2021-04-02
+---
+
 # Les bases du langage
 
 ## Les types de valeur

@@ -1,3 +1,7 @@
+---
+date: 2021-04-30
+---
+
 # Déploiement
 
 Mettre un site en ligne requiert de bien comprendre le fonctionnement d'un serveur. Notre but est de copier nos fichiers de notre machine vers une autre, pour les rendre disponibles sur Internet.

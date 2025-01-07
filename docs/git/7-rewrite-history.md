@@ -1,3 +1,7 @@
+---
+date: 2021-10-08
+---
+
 # Réécrire l'historique
 
 ## Commit --amend - Modifier le dernier commit

@@ -1,3 +1,7 @@
+---
+date: 2024-11-29
+---
+
 # Déployer une application
 
 [[toc]]
@@ -47,49 +51,87 @@ Souvent, nos réalisations vont devoir être vérifiés par plusieurs personnes,
 
 Ensuite vient la mise en production, c'est-à-dire mettre la dernière version à disposition des clients finaux de l'application.
 
-Toutes ces étapes nécessitent un déploiement sur un environnement différent, d'où la nécessité d'avoir un processus fixe.
+Toutes ces étapes nécessitent un déploiement sur un environnement différent, d'où la nécessité d'avoir un processus constant, incluant **simplement** les variations liées aux environnements.
 
-De la même manière, ces différents environnements ne vont pas présenter exactement les mêmes développements (ou même tickets) en même temps. Ce qui implique une méthodologie de travail, pour s'y retrouver.
+De la même manière, ces différents environnements vont présenter exactement différents états (tickets, branches, versions, etc.) en même temps. Ce qui implique une méthodologie de travail plus générale, pour s'y retrouver.
 
-## FTP, SCP et SSH
+## Bien choisir son hébergement
 
+### Quels critères ?
 
-### Déploiement par FTP
+- Espace disponible
+- Hébergement spécialisé (Wordpress)
+- Prise en compte des langages utilisés (Php / NodeJS)
+- Base de données
+- Accès en SSH ou non (automatisation / commandes)
+- Couts ( :warning: parfois en fonction de la charge)
 
-En vidéo :
+### Exemples d'hébergeurs
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c66268b37c624ca6a801362cb87b9bd0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+- [GitHub pages](https://pages.github.com/)
+- [OVH](https://www.ovhcloud.com/fr/)
+- [O2Switch](https://www.o2switch.fr/)
+- [Infomaniak](https://www.infomaniak.com/fr)
+- [Gandi](https://www.gandi.net/fr)
 
-Le FTP est un protocole de transfert de fichiers, permettant de se connecter à un serveur pour mettre en ligne des fichiers ou en récupérer depuis un serveur. Il peut s'utiliser en ligne de commande, ou en utilisant des interfaces graphiques, comme [FileZilla](https://filezilla-project.org/download.php?show_all=1).
+## <abbr title="File Transfert Protocol">FTP</abbr>
 
-Il est très utile pour les sites simples (HTML, JS, CSS), ne nécessitant pas de lancer des commandes sur le serveur ou si le serveur n'offre pas d'accès SSH.
+Un moyen simple, basique, est de déplacer les fichiers sur le serveur, *via* une interface graphique, telle que [FileZilla](https://filezilla-project.org/download.php?show_all=1), ou en ligne de commande. Il sert également à récupérer des fichiers sur le même serveur, ce qui peut permettre de partager le travail entre plusieurs ordinateurs en utilisant le serveur comme "base".
 
-Pour déployer un site en FTP, nous avons besoin : 
+Pour des sites composés uniquement de fichiers HTML, CSS et JavaScript, c'est une méthode simple et efficace ! 
+
+Le <abbr title="File Transfert Protocol">FTP</abbr> est un protocole de transfert de fichiers, permettant de se connecter à un serveur pour mettre en ligne des fichiers ou en récupérer depuis un serveur.
+
+Pour déployer un site en <abbr title="File Transfert Protocol">FTP</abbr>, nous avons besoin :
 - de l'adresse du site (IP ou nom de domaine)
 - d'un port à utiliser
 - d'un identifiant et d'un mot de passe **ou** d'une clé SSH valide (ajoutée au serveur)
-- de [FileZilla](https://filezilla-project.org/download.php?show_all=1) ou d'un outil de FTP équivalent.
+- de [FileZilla](https://filezilla-project.org/download.php?show_all=1) ou d'un outil de <abbr title="File Transfert Protocol">FTP</abbr> équivalent.
 
-### Configurer FileZilla
+Quelques [exemples de déploiement par <abbr title="File Transfert Protocol">FTP</abbr> sont disponibles dans la page suivante](05-ftp.md).
 
-Les options par défaut de FileZilla font en général très bien l'affaire, si bien que nous avons seulement besoin de configurer l'accès à notre site.
+### Avantages de <abbr title="File Transfert Protocol">FTP</abbr>
 
-Pour cela, ouvrez le gestionnaire de sites (`Fichiers > Gestionnaire de sites...` ou le bouton "Gestionnaire de sites" en haut à gauche) et entrez les informations requises.
+- Très rapide à prendre en main
+- Les hébergements les moins chers le permettent toujours
+- Rien de plus efficace pour des sites simples (HTML, CSS, JS et même PHP)
 
-![](./img/filezilla-new-site.png)
+### Inconvénients de <abbr title="File Transfert Protocol">FTP</abbr>
 
-- Protocole : FTP ou SFTP sont les deux options les plus courantes (nous allons choisir SFTP)
-- Hôte : adresse IP ou nom de domaine fourni par l'hébergeur
-- Chiffrement (apparait si connexion FTP) : vous permet de dire comment chiffrer la connexion (à voir selon l'hébergement)
-- Type d'authentification : je vous recommande `Normale` (qui permet de retenir identifiant **et** mot de passe)
+- Pose des problèmes pour la gestion de version (et le travail collaboratif)
+- Plus difficilement automatisable (mais [loin d'être infaisable, des outils existent](https://github.com/banago/PHPloy))
+- Pas ou peu utilisable avec des frameworks comme Symfony ou Angular (besoin de lancer des commandes)
+- La complexité du déploiement augmente avec la quantité de dossiers / fichiers
 
-Une fois les informations entrées, plus qu'à cliquer sur `Connexion` pour tester et parcourir les fichiers.
+## <abbr title="Secure Shell">SSH</abbr>
 
-### Transférer des fichiers
+> Secure Shell (SSH) est un protocole de communication sécurisé. Le protocole de connexion impose un échange de clés de chiffrement en début de connexion. Par la suite, tous les segments TCP sont authentifiés et chiffrés.
+>
+> -- <cite>[Wikipedia](https://fr.wikipedia.org/wiki/Secure_Shell)</cite>
 
-Cette partie est très simple, il suffit de déplacer les fichiers d'un côté de l'interface à l'autre.
+On parle souvent de connexion SSH pour l'établissement d'une connexion avec un serveur distant (en général, une machine Linux). Cette connexion permet d'interagir avec cette machine *via* son terminal. 
 
+Pour établir la connexion, des échanges de clés SSH et/ou de mots de passe ont lieu pour valider l'identité de la personne qui se connecte **et** du serveur.
 
-## Exemple pratique
+Exemple de clé publique qui est envoyée : 
 
-[Wordpress](./10-wordpress.md)
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIZSiXTcNWfFcq1vTzhvBylpaVOjNStXHb0lNSZ2zoXrDDHvHpMUuulsLJl4gpYJzqC2eCRigl9tGDdz25/RRZtzU5TJfw90bVl5cB5SxImNWZdE7g78PhoO+niEj1vcgkmh27805BvdBeSE1yVVdIt0ZexwwiKqdZmLNs66DRVC/YE9LP0CBaWmNANx1FZAoAvU1U1AJhPL9sax5xPg4hHNdAjGXusTQRyew67GcLL/ACqyX4Q81tm9QphJipfD4n7Ska318dj8ARhRTge/M4n2eIcI1RRkkDbuklMCM3mZ10oGD+Pc8gRl+RLafHL27JEWK4Ty4T7ArE0mOgsFoxZWQCcWrp08eMhviMKzNQQnuHawjpKhDGA8HbC/GfSoldOprORmp6lqbLJ32qqU0kuVhmjLdb0qH3XXfK97yHqm8G92gA1f6ACE4rsbJ5XtMbZO/7Yr6oJykJ4LYuk7NqRmhF4bRVKwL/MbOS8egIEq8xBcgGC+SSD8m54u8vWAk= remi@XXXX
+```
+
+### Avantages
+
+- Possibilité de lancer des commandes (donc plus de possibilités)
+- Très automatisable
+- En général, plus sécurisé (gestion des accès par clé SSH)
+
+### Inconvénients
+
+- Tous les hébergements ne le permettent pas
+- Gestion des accès plus ou moins aisée
+
+### <abbr title="Secure Copy">SCP</abbr> / RSync / SFTP
+
+Ces outils permettant de communiquer avec un serveur *via* <abbr title="Secure Shell">SSH</abbr> et de transmettre des fichiers.
+
+<abbr title="Secure Copy">SCP</abbr> permet de copier des fichiers / dossiers (dans un sens ou dans l'autre), alors que RSync permet de Synchroniser des dossiers (transferts dans les deux sens simultanément).

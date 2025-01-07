@@ -1,3 +1,7 @@
+---
+date: 2022-01-28
+---
+
 # Projet - montage d'ordinateurs
 
 [[toc]]
