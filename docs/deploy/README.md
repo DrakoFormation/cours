@@ -1,12 +1,8 @@
----
-date: 2021-04-30
----
-
 # Déploiement
 
 Mettre un site en ligne requiert de bien comprendre le fonctionnement d'un serveur. Notre but est de copier nos fichiers de notre machine vers une autre, pour les rendre disponibles sur Internet.
 
-- [Principes du déploiement et DevOps](./00-intro.md)
+- [Principes du déploiement, DevOps et outillage](./00-intro.md)
 - Mettre en ligne un [site Wordpress](./10-wordpress.md)
 - Utiliser [Git pour copier les fichiers](./20-git.md)
 - [GitHub Pages](./21-github-pages.md)

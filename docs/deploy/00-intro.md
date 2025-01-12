@@ -1,8 +1,4 @@
----
-date: 2024-11-29
----
-
-# Déployer une application
+# Des outils et manières de faire
 
 [[toc]]
 
@@ -68,13 +64,27 @@ De la même manière, ces différents environnements vont présenter exactement 
 
 ### Exemples d'hébergeurs
 
+Des hébergeurs que nous avons utilisés chez Drakona :
+
 - [GitHub pages](https://pages.github.com/)
 - [OVH](https://www.ovhcloud.com/fr/)
 - [O2Switch](https://www.o2switch.fr/)
 - [Infomaniak](https://www.infomaniak.com/fr)
-- [Gandi](https://www.gandi.net/fr)
+- [Ionos](https://www.ionos.fr/)
 
-## <abbr title="File Transfert Protocol">FTP</abbr>
+D'autres, renommés :
+
+- [Gandi](https://www.gandi.net/fr)
+- [AWS (Amazon)](https://aws.amazon.com/fr/)
+- [Google Cloud](https://cloud.google.com/?hl=fr)
+- [Hostinger](https://www.hostinger.fr/)
+- [Planet Hoster](https://www.planethoster.com/fr)
+
+Vous trouverez même des [listes pour classer les hébergeurs](https://www.journaldugeek.com/hebergeur/), mais j'ai beaucoup de mal à y faire confiance, principalement parce que les prix annoncés dans ces listes correspondent rarement à la réalité et que ce sont des tas de liens sponsorisés.
+
+## Outils de transfert de fichiers
+
+### <abbr title="File Transfert Protocol">FTP</abbr>
 
 Un moyen simple, basique, est de déplacer les fichiers sur le serveur, *via* une interface graphique, telle que [FileZilla](https://filezilla-project.org/download.php?show_all=1), ou en ligne de commande. Il sert également à récupérer des fichiers sur le même serveur, ce qui peut permettre de partager le travail entre plusieurs ordinateurs en utilisant le serveur comme "base".
 
@@ -90,20 +100,20 @@ Pour déployer un site en <abbr title="File Transfert Protocol">FTP</abbr>, nous
 
 Quelques [exemples de déploiement par <abbr title="File Transfert Protocol">FTP</abbr> sont disponibles dans la page suivante](05-ftp.md).
 
-### Avantages de <abbr title="File Transfert Protocol">FTP</abbr>
+#### Avantages de <abbr title="File Transfert Protocol">FTP</abbr>
 
 - Très rapide à prendre en main
 - Les hébergements les moins chers le permettent toujours
 - Rien de plus efficace pour des sites simples (HTML, CSS, JS et même PHP)
 
-### Inconvénients de <abbr title="File Transfert Protocol">FTP</abbr>
+#### Inconvénients de <abbr title="File Transfert Protocol">FTP</abbr>
 
 - Pose des problèmes pour la gestion de version (et le travail collaboratif)
 - Plus difficilement automatisable (mais [loin d'être infaisable, des outils existent](https://github.com/banago/PHPloy))
 - Pas ou peu utilisable avec des frameworks comme Symfony ou Angular (besoin de lancer des commandes)
 - La complexité du déploiement augmente avec la quantité de dossiers / fichiers
 
-## <abbr title="Secure Shell">SSH</abbr>
+### <abbr title="Secure Shell">SSH</abbr>
 
 > Secure Shell (SSH) est un protocole de communication sécurisé. Le protocole de connexion impose un échange de clés de chiffrement en début de connexion. Par la suite, tous les segments TCP sont authentifiés et chiffrés.
 >
@@ -119,22 +129,24 @@ Exemple de clé publique qui est envoyée :
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIZSiXTcNWfFcq1vTzhvBylpaVOjNStXHb0lNSZ2zoXrDDHvHpMUuulsLJl4gpYJzqC2eCRigl9tGDdz25/RRZtzU5TJfw90bVl5cB5SxImNWZdE7g78PhoO+niEj1vcgkmh27805BvdBeSE1yVVdIt0ZexwwiKqdZmLNs66DRVC/YE9LP0CBaWmNANx1FZAoAvU1U1AJhPL9sax5xPg4hHNdAjGXusTQRyew67GcLL/ACqyX4Q81tm9QphJipfD4n7Ska318dj8ARhRTge/M4n2eIcI1RRkkDbuklMCM3mZ10oGD+Pc8gRl+RLafHL27JEWK4Ty4T7ArE0mOgsFoxZWQCcWrp08eMhviMKzNQQnuHawjpKhDGA8HbC/GfSoldOprORmp6lqbLJ32qqU0kuVhmjLdb0qH3XXfK97yHqm8G92gA1f6ACE4rsbJ5XtMbZO/7Yr6oJykJ4LYuk7NqRmhF4bRVKwL/MbOS8egIEq8xBcgGC+SSD8m54u8vWAk= remi@XXXX
 ```
 
-### Avantages
+#### Avantages
 
 - Possibilité de lancer des commandes (donc plus de possibilités)
 - Très automatisable
 - En général, plus sécurisé (gestion des accès par clé SSH)
 
-### Inconvénients
+#### Inconvénients
 
 - Tous les hébergements ne le permettent pas
 - Gestion des accès plus ou moins aisée
 
-### <abbr title="Secure Copy">SCP</abbr> / RSync / SFTP
+#### <abbr title="Secure Copy">SCP</abbr> / RSync / SFTP
 
 Ces outils permettant de communiquer avec un serveur *via* <abbr title="Secure Shell">SSH</abbr> et de transmettre des fichiers.
 
 <abbr title="Secure Copy">SCP</abbr> permet de copier des fichiers / dossiers (dans un sens ou dans l'autre), alors que RSync permet de Synchroniser des dossiers (transferts dans les deux sens simultanément).
+
+SFTP, quant à lui, est identique à FTP, mais utiliser un tunnel sécurisé (d'où le S). C'est en général le protocole à utiliser quand on utilise FTP (avec FileZilla, par exemple).
 
 ## Quelques avis personnels
 
@@ -144,11 +156,13 @@ Certaines offres de *cloud* peuvent être tentantes pour gérer le futur, et il 
 
 Pensez également à la charge de travail que représente le fait d'avoir un hébergement (la même chose que pour votre application). Que faut-il faire pour s'assurer qu'il reste à jour ? Quel temps cela occupe-t-il par mois ? Pouvez-vous vous le permettre ? Si ça n'est pas le cas, il faut prévoir soit un autre hébergement, soit de déléguer (faisable quand on est une entreprise ;) ).
 
-Mettre en ligne un site en utilisant le protocole FTP ou l'outil SCP ne me semble pas viable sur le long terme. Passer un peu de temps à prévoir un peu d'automatisation peut vous faire gagner un temps précieux rapidement !
+Mettre en ligne un site en utilisant le protocole FTP ou l'outil SCP ne me semble pas viable sur le long terme. Passer un peu de temps à prévoir l'automatisation peut vous faire gagner un temps précieux (et c'est parfois simple à mettre en place) !
 
 C'est pour ça qu'on utilise des outils comme :
 - [Deployer](https://deployer.org/) pour nos sites (surtout PHP/Symfony)
 - [GitHub Pages](https://pages.github.com/) pour les documentations
 - des outils de CI/CD ([Github Actions](https://github.com/features/actions) par exemple) pour vérifier notre code **et** le mettre en ligne.
 
-Nous avons utilisé pas mal d'autres outils par le passé et avons beaucoup auto-hébergé (avec un / des serveurs dédiés ou VPS) des sites comme celui que vous consultez actuellement, mais le temps passé en vaut-il le coût ?
+Nous avons utilisé pas mal d'autres outils par le passé et avons beaucoup auto-hébergé (avec des serveurs dédiés ou <abbr title="Virtual Private Servers">VPS</abbr>) des sites comme celui que vous consultez actuellement, mais le temps passé en vaut-il le coût ?
+
+

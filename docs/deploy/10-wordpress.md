@@ -1,7 +1,3 @@
----
-date: 2024-11-29
----
-
 # Wordpress
 
 ## Avec un plugin
