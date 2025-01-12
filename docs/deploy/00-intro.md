@@ -135,3 +135,20 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIZSiXTcNWfFcq1vTzhvBylpaVOjNStXHb0lNSZ2zo
 Ces outils permettant de communiquer avec un serveur *via* <abbr title="Secure Shell">SSH</abbr> et de transmettre des fichiers.
 
 <abbr title="Secure Copy">SCP</abbr> permet de copier des fichiers / dossiers (dans un sens ou dans l'autre), alors que RSync permet de Synchroniser des dossiers (transferts dans les deux sens simultanément).
+
+## Quelques avis personnels
+
+Il est important de choisir un hébergement **adapté** à vos besoins, non seulement au moment où vous souscrivez le contrat, mais aussi pour l'avenir et les objectifs du site que vous voulez déployer. 
+
+Certaines offres de *cloud* peuvent être tentantes pour gérer le futur, et il faut simplement toujours avoir leurs contraintes en tête (coûts dépendant du traffic, de l'espace utilisé, etc.).
+
+Pensez également à la charge de travail que représente le fait d'avoir un hébergement (la même chose que pour votre application). Que faut-il faire pour s'assurer qu'il reste à jour ? Quel temps cela occupe-t-il par mois ? Pouvez-vous vous le permettre ? Si ça n'est pas le cas, il faut prévoir soit un autre hébergement, soit de déléguer (faisable quand on est une entreprise ;) ).
+
+Mettre en ligne un site en utilisant le protocole FTP ou l'outil SCP ne me semble pas viable sur le long terme. Passer un peu de temps à prévoir un peu d'automatisation peut vous faire gagner un temps précieux rapidement !
+
+C'est pour ça qu'on utilise des outils comme :
+- [Deployer](https://deployer.org/) pour nos sites (surtout PHP/Symfony)
+- [GitHub Pages](https://pages.github.com/) pour les documentations
+- des outils de CI/CD ([Github Actions](https://github.com/features/actions) par exemple) pour vérifier notre code **et** le mettre en ligne.
+
+Nous avons utilisé pas mal d'autres outils par le passé et avons beaucoup auto-hébergé (avec un / des serveurs dédiés ou VPS) des sites comme celui que vous consultez actuellement, mais le temps passé en vaut-il le coût ?
