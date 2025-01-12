@@ -80,6 +80,11 @@ D'autres, renommés :
 - [Hostinger](https://www.hostinger.fr/)
 - [Planet Hoster](https://www.planethoster.com/fr)
 
+D'autres encore, plus spécialisés :
+
+- [WordPress.com](https://wordpress.com/fr/)
+- [Platform.sh](https://platform.sh/) ou [UpSun](https://upsun.com/)
+
 Vous trouverez même des [listes pour classer les hébergeurs](https://www.journaldugeek.com/hebergeur/), mais j'ai beaucoup de mal à y faire confiance, principalement parce que les prix annoncés dans ces listes correspondent rarement à la réalité et que ce sont des tas de liens sponsorisés.
 
 ## Outils de transfert de fichiers
@@ -164,5 +169,3 @@ C'est pour ça qu'on utilise des outils comme :
 - des outils de CI/CD ([Github Actions](https://github.com/features/actions) par exemple) pour vérifier notre code **et** le mettre en ligne.
 
 Nous avons utilisé pas mal d'autres outils par le passé et avons beaucoup auto-hébergé (avec des serveurs dédiés ou <abbr title="Virtual Private Servers">VPS</abbr>) des sites comme celui que vous consultez actuellement, mais le temps passé en vaut-il le coût ?
-
-
