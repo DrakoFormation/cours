@@ -23,6 +23,7 @@ Les étapes représentées dans le schéma ci-dessus :
 4. Le serveur Web fait le lien entre l'url demandée et un ensemble de fichiers et ces fichiers sont interprétés / exécutés.
 5. Le serveur Web renvoie la réponse à l'utilisateur.
 
+
 On pourrait ajouter d'autres étapes (ce qu'il se passe au sein du serveur), mais c'est une autre histoire ;).
 
 ## DevOps
