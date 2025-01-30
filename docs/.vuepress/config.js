@@ -145,6 +145,7 @@ export default defineUserConfig({
       },
       '/docker/',
       '/ci/',
+      '/security/',
     ]
   }),
 
