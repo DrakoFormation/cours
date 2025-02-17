@@ -24,7 +24,7 @@ Cryptage :
   - fonctions :
     - [MD5](https://fr.wikipedia.org/wiki/MD5)
     - [SHA](https://fr.wikipedia.org/wiki/Secure_Hash_Algorithm) (0, 1, 2 ou 3)
-    - [BCrypt](https://fr.wikipedia.org/wiki/MD5)
+    - [BCrypt](https://fr.wikipedia.org/wiki/Bcrypt)
     - [PBKDF2](https://fr.wikipedia.org/wiki/PBKDF2)
 - Encodage / décodage
   - Passer d'un format à un autre (JSON -> XML, .png vers .gif, etc.)
